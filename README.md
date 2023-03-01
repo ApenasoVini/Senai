@@ -4,5 +4,5 @@
 
 <p>Repositório do Ensino Médio.</p>
 <div align="center">
-  <img height="400px" src="https://www.ufrgs.br/neo/wp-content/uploads/2019/11/logomarca-oficial-SENAI.jpg"/>
+  <img src="https://logodownload.org/wp-content/uploads/2019/08/senai-logo-1.png"/>
 </div>
