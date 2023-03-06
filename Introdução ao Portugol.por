@@ -3,8 +3,7 @@ programa
     funcao inicio()//inicia a função "início"
     {
     	   nome()
-    	   idade()
-    	   
+    	   idade()  
 }
     funcao nome()//inicia a função "nome"
     {
@@ -27,21 +26,5 @@ programa
 	   escreva("Por favor, digite um número:\n ")
 	   escreva("Por favor, digite outro número:\n ")
  	   escreva("Por favor, digite o número final:\n ")
-
-
 }
-
-	
-	
 	}
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 856; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
