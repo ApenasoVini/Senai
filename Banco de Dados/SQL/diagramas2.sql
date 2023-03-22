@@ -1,8 +1,10 @@
 CREATE TABLE campeonato( 
 regulamento VARCHAR(1000) NOT NULL, times VARCHAR(600) NOT NULL, 
 rebaixados VARCHAR(400) NOT NULL, 
-mata_mata VARCHAR(2000) NOT NULL, pontuacao INT NOT NULL, 
-grade_PK VARCHAR(4000) NOT NULL, PRIMARY KEY (grade_PK) 
+mata_mata VARCHAR(2000) NOT NULL, 
+pontuacao INT NOT NULL, 
+grade_PK VARCHAR(4000) NOT NULL, 
+PRIMARY KEY (grade_PK) 
 ) 
 CREATE TABLE time( 
 torcida VARCHAR(1000) NOT NULL, 
@@ -16,7 +18,8 @@ CREATE TABLE local_de_realizacao(
 pais_PK VARCHAR(20) NOT NULL, 
 estadios VARCHAR(600) NOT NULL, 
 custos INT NOT NULL, 
-comissao VARCHAR(2000) NOT NULL, PRIMARY KEY (pais_PK) 
+comissao VARCHAR(2000) NOT NULL, 
+PRIMARY KEY (pais_PK) 
 ) 
 CREATE TABLE jogos( 
 horarios INT NOT NULL, 
