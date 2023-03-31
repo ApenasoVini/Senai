@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: black;
+}
+
+/* id=# class=. */
+#titulo {
+    font-size: 50px;
+    color: white;
+    font-family: system-ui;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#botao{
+    font-family: Arial;
+    height: 100px;
+    width: 200px;
+    margin-left: 550px;
+    font-size:x-large;
+    border-radius: 10px;
+    border: 5px solid lightblue;
+    margin-top: 10px;
+
+}
+
+#texto{
+    font-family: Arial;
+    font-size: x-large;
+    color: white;
+    margin-left: 520px;
+    margin-top: 200px;
+
+}
+
+b{
+    color: blue;
+}
