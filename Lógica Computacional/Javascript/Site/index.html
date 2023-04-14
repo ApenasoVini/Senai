@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="midia/icone.png" type="image/png">
+    <title>SiteV</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="titulo"><b>V</b>inícius <b>S</b>oares <b>F</b>rança</h1>
+    </div>
+
+    <div>
+        <button onclick="media()" class="botao">Cálculo da Média</button>
+
+        <p id="texto">Clique aqui para o teste</p>
+
+        <button onclick="idadeenome()" class="botao">Idade</button>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+
+    function media() {
+
+        do {
+            var n = prompt("Quantos números você quer usar na média?")
+        } while (n <= 0)
+        var resultado, soma = 0
+
+        for (var i = 1; i <= n; i++) {
+            soma += Number(prompt("Digite o " + i + "º número:"))
+        }
+        resultado = soma / n
+        alert(resultado)
+    }
+
+    function idadeenome() {
+
+        do {
+            var nome = prompt("Qual é o seu nome?")
+            var ano = prompt("Quando você nasceu?")
+
+        } while (nome == "" || ano == "")
+
+        idade = 2023 - ano
+
+        if (idade >= 18) {
+            alert("Olá " + nome + " Você tem " + idade + " anos, e é maior de idade.")
+        }
+        else {
+            alert("Olá " + nome + " Você tem " + idade + " anos, e é menor de idade.")
+        }
+    }
+
+</script>
