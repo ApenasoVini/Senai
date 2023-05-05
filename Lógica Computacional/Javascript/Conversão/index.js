@@ -1,5 +1,4 @@
 //início da função 
-
 function converte() {
 
     //A variável temperatura é definida pelo valor digitado pelo usuário
