@@ -11,6 +11,7 @@ function media() {
         resultado = soma / n
         alert(resultado)
     }
+media()
 
     function idadeenome() {
 
@@ -29,3 +30,4 @@ function media() {
             alert("Olá " + nome + " Você tem " + idade + " anos, e é menor de idade.")
         }
     }
+idadeenome()
