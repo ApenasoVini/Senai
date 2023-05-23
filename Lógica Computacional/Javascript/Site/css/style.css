@@ -2,17 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
-    background-color: black;
+    background-color: white;
 }
 
 /* id=# class=. */
 #titulo {
     font-size: 50px;
-    color: white;
+    color: black;
     font-family: system-ui;
     text-align: center;
     margin-top: 10px;
@@ -23,13 +22,18 @@ body {
     height: 100px;
     width: 200px;
     margin-left: 550px;
-    /* margin-top: 250px; */
     font-size: x-large;
-    border-radius: 10px;
-    border: 2px solid red;
-
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    background-color: white;
 }
 
-b {
-    color: red
+.botao:hover {
+    font-family: Arial;
+    height: 100px;
+    width: 200px;
+    margin-left: 550px;
+    font-size: x-large;
+    border-radius: 5px;
+    background-color: lightblue;
 }
