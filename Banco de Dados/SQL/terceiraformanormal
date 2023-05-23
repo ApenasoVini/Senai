@@ -66,5 +66,18 @@ FOREIGN KEY (nome_cliente_fk) REFERENCES cliente (nome_cliente_pk),
 FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
 )
 
+INSERT INTO cliente (nome_cliente_pk)
+VALUES ('João')
+
+INSERT INTO pedido (id_pedido_pk)
+VALUES ('ffjhs43fg55')
+
+INSERT INTO produto (id_produto_pk, nome_produto, categoria_produto)
+VALUES ('fgd4trdfv', 'Hambúrguer Simples', 'Produto Alimentício')
+
+SELECT * FROM cliente
+SELECT * FROM pedido
+SELECT * FROM produto
+
 -- Esta tabela está na 1ª forma normal pois não apresenta atributos multivalorados ou compostos 
 -- e na segunda forma pois os atributos dependem da chave primária

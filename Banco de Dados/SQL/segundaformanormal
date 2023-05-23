@@ -18,3 +18,12 @@ CREATE TABLE empresa_empregado (
     FOREIGN KEY (id_empresa_fk) REFERENCES empresa (id_empresa_pk),
     FOREIGN KEY (id_empregado_fk) REFERENCES empregado (id_empregado_pk)
 )
+
+INSERT INTO empresa (id_empresa_pk, cep, complemento_endereco)
+VALUES ('1323dgd4', 8882342, 'Em frente à biblioteca')
+
+INSERT INTO empregado (id_empregado_pk, nome_empregado, horas_semanais)
+VALUES ('ddfr4fvb', 'Jonas', '30 horas semanais')
+
+SELECT * FROM empresa
+SELECT * FROM empregado

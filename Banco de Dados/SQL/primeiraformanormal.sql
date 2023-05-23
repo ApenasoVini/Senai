@@ -1,49 +1,49 @@
 CREATE TABLE clientes (
-    id_pk VARCHAR(80) NOT NULL,
-    interesses VARCHAR(200) NOT NULL,
-    historico VARCHAR(4000) NOT NULL,
-    nome_completo VARCHAR(100) NOT NULL,
-    data_de_nascimento VARCHAR(10) NOT NULL,
-    cadastro VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id_pk)
+    id_cliente_pk VARCHAR(80) NOT NULL,
+    -- interesses VARCHAR(200) NOT NULL,
+    -- historico VARCHAR(4000) NOT NULL,
+    -- nome_completo VARCHAR(100) NOT NULL,
+    -- data_de_nascimento VARCHAR(10) NOT NULL,
+    -- cadastro VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id_cliente_pk)
 ),
 
 CREATE TABLE livros (
-    id_pk VARCHAR(80) NOT NULL,
-    genero VARCHAR(200) NOT NULL,
-    autor VARCHAR(40) NOT NULL,
+    id_livro_pk VARCHAR(80) NOT NULL,
+    -- genero VARCHAR(200) NOT NULL,
+    -- autor VARCHAR(40) NOT NULL,
     numero VARCHAR(200) NOT NULL,
-    localizacao VARCHAR(500) NOT NULL,
-    editora VARCHAR(200) NOT NULL,
-    PRIMARY KEY (id_pk)
+    -- localizacao VARCHAR(500) NOT NULL,
+    -- editora VARCHAR(200) NOT NULL,
+    PRIMARY KEY (id_livro_pk)
 ),
 
 CREATE TABLE genero (
-    id_fk VARCHAR(80) NOT NULL,
+    id_livro_fk VARCHAR(80) NOT NULL,
     genero_pk VARCHAR(200) NOT NULL,
     PRIMARY KEY (genero_pk),
-    FOREIGN KEY (id_fk) REFERENCES livros (id_pk)
+    FOREIGN KEY (id_livro_fk) REFERENCES livros (id_livro_pk)
 ),
 
 CREATE TABLE autor (
-    id_fk VARCHAR(80) NOT NULL,
+    id_livro_fk VARCHAR(80) NOT NULL,
     autor_pk VARCHAR(40) NOT NULL,
     PRIMARY KEY (autor_pk),
-    FOREIGN KEY (id_fk) REFERENCES livros (id_pk)
+    FOREIGN KEY (id_livro_fk) REFERENCES livros (id_livro_pk)
 ),
 
 CREATE TABLE interesses (
-    id_fk VARCHAR(80) NOT NULL,
+    id_cliente_fk VARCHAR(80) NOT NULL,
     interesses_pk VARCHAR(200) NOT NULL,
     PRIMARY KEY (interesses_pk),
-    FOREIGN KEY (id_fk) REFERENCES clientes (id_pk)
+    FOREIGN KEY (id_cliente_fk) REFERENCES clientes (id_cliente_pk)
 ),
 
 CREATE TABLE historico (
-    id_fk VARCHAR(80) NOT NULL,
+    id_cliente_fk VARCHAR(80) NOT NULL,
     historico_pk VARCHAR(4000) NOT NULL,
     PRIMARY KEY (historico_pk),
-    FOREIGN KEY (id_fk) REFERENCES clientes (id_pk)
+    FOREIGN KEY (id_cliente_fk) REFERENCES clientes (id_cliente_pk)
 ),
 
 CREATE TABLE data_de_nascimento (
@@ -71,3 +71,48 @@ CREATE TABLE localizacao (
     biblioteca VARCHAR(25) NOT NULL,
     setor VARCHAR(2) NOT NULL
 )
+
+INSERT INTO clientes (id_cliente_pk)
+VALUES ('12g32j2')
+
+INSERT INTO livros (id_livro_pk, numero)
+VALUES ('34hui21', '23')
+
+INSERT INTO genero (id_livro_fk, numero)
+VALUES ('34hui21', '23')
+
+INSERT INTO autor (id_livro_fk, numero)
+VALUES ('34hui21', '23')
+
+INSERT INTO interesses (id_cliente_fk, numero)
+VALUES ('12g32j2', '23')
+
+INSERT INTO historico (id_cliente_fk, numero)
+VALUES ('12g32j2', '23')
+
+INSERT INTO data_de_nascimento (dia, mes, ano)
+VALUES ('01', '06','2000')
+
+INSERT INTO nome_completo (nome, sobrenome)
+VALUES ('Vitor', 'Mateus')
+
+INSERT INTO cadastro (usuario, senha)
+VALUES ('vitor04', '213421')
+
+INSERT INTO numero (numero_de_serie, quantidade_da_serie)
+VALUES ('3', '2103')
+
+INSERT INTO localizacao (biblioteca, setor)
+VALUES ('biblioteca 1', '6')
+
+SELECT * FROM clientes
+SELECT * FROM livros
+SELECT * FROM genero
+SELECT * FROM autor
+SELECT * FROM interesses
+SELECT * FROM historico
+SELECT * FROM data_de_nascimento
+SELECT * FROM nome_completo
+SELECT * FROM cadastro
+SELECT * FROM numero
+SELECT * FROM localizacao
