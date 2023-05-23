@@ -18,8 +18,6 @@ CREATE TABLE livros (
     PRIMARY KEY (id_pk)
 ),
 
-
-
 CREATE TABLE genero (
     id_fk VARCHAR(80) NOT NULL,
     genero_pk VARCHAR(200) NOT NULL,
