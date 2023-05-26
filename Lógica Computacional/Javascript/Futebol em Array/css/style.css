@@ -15,4 +15,21 @@ body {
     text-align: center;
     margin-top: 40px;
     font-family: system-ui;
+    font-size: large;
+}
+
+#titulo {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial;
+}
+
+#cxbtn {
+    text-align: center;
+}
+
+#btn {
+    font-family: system-ui;
+    font-size: medium;
+    background: transparent;
 }
