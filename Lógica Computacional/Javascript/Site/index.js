@@ -30,4 +30,4 @@ media()
             alert("Olá " + nome + " Você tem " + idade + " anos, e é menor de idade.")
         }
     }
-idadeenome()
+

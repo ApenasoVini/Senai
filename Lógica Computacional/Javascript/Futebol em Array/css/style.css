@@ -10,3 +10,9 @@ body {
 }
 
 /* id=# class=. */
+
+#time {
+    text-align: center;
+    margin-top: 40px;
+    font-family: system-ui;
+}
