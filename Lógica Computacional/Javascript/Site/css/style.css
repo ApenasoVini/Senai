@@ -21,7 +21,6 @@ body {
     font-family: Arial;
     height: 100px;
     width: 200px;
-    margin-left: 550px;
     font-size: x-large;
     border-radius: 5px;
     border: 1px solid lightblue;
@@ -32,8 +31,11 @@ body {
     font-family: Arial;
     height: 100px;
     width: 200px;
-    margin-left: 550px;
     font-size: x-large;
     border-radius: 5px;
     background-color: lightblue;
+}
+
+#botoes {
+    text-align: center;
 }
