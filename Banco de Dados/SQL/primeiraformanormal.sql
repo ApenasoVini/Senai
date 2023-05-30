@@ -34,9 +34,9 @@ CREATE TABLE livro(
 );
 
 CREATE TABLE genero(
-    isbn_pk_fk VARCHAR(13) NOT NULL,
+    isbn_fk VARCHAR(13) NOT NULL,
     genero_pk VARCHAR(20) NOT NULL,
-    FOREIGN KEY (isbn_pk_fk) REFERENCES livro (isbn_pk)
+    FOREIGN KEY (isbn_fk) REFERENCES livro (isbn_pk)
 );
 
 CREATE TABLE cliente(
@@ -55,23 +55,23 @@ CREATE TABLE cliente(
 
 CREATE TABLE reserva(
     codigo_reserva_pk VARCHAR(13) NOT NULL,
-    id_pk_fk VARCHAR(15) NOT NULL,
-    isbn_pk_fk VARCHAR(13) NOT NULL,
+    id_fk VARCHAR(15) NOT NULL,
+    isbn_fk VARCHAR(13) NOT NULL,
     PRIMARY KEY (codigo_reserva_pk),
-    FOREIGN KEY (id_pk_fk) REFERENCES cliente (id_pk),
-    FOREIGN KEY (isbn_pk_fk) REFERENCES livro (isbn_pk)
+    FOREIGN KEY (id_fk) REFERENCES cliente (id_pk),
+    FOREIGN KEY (isbn_fk) REFERENCES livro (isbn_pk)
 );
 
 INSERT INTO livro (isbn_pk, titulo, autor, editora, ano_publicacao, franquia_livraria, secao_livraria, prateleira_livraria)
 VALUES ('456789123', 'Os 3 Porquinhos', 'Joseph Jacobs', 'Girassol', '2009', 'Livraria Palhoça', '2', '4')
 
-INSERT INTO genero (isbn_pk_fk, genero_pk)
+INSERT INTO genero (isbn_fk, genero_pk)
 VALUES ('456789123', 'Infantil')
 
 INSERT INTO cliente (id_pk, nome, data_nascimento, email, numero_cartao, dono_cartao, cpf_dono, codigo_seguranca)
 VALUES ('1', 'Maria', '07102017', 'mariajulia@mail.com', '5236667890090965', 'MARIA JÚLIA', '789654120365489', '987')
 
-INSERT INTO reserva (codigo_reserva_pk, id_pk_fk, isbn_pk_fk)
+INSERT INTO reserva (codigo_reserva_pk, id_fk, isbn_fk)
 VALUES ('123', '1', '456789123')
 
 SELECT * FROM livro
