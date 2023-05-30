@@ -1,118 +1,80 @@
-CREATE TABLE clientes (
-    id_cliente_pk VARCHAR(80) NOT NULL,
-    -- interesses VARCHAR(200) NOT NULL,
-    -- historico VARCHAR(4000) NOT NULL,
-    -- nome_completo VARCHAR(100) NOT NULL,
-    -- data_de_nascimento VARCHAR(10) NOT NULL,
-    -- cadastro VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id_cliente_pk)
-),
+-- CREATE TABLE livro(
+--     isbn_pk VARCHAR(13) NOT NULL,
+--     titulo VARCHAR(50) NOT NULL,
+--     genero VARCHAR(20) NOT NULL,
+--     autor VARCHAR(50) NOT NULL,
+--     editora VARCHAR(50),
+--     ano_publicacao VARCHAR(4),
+--     livraria VARCHAR(100) NOT NULL,
+--     PRIMARY KEY (isbn_pk)
+-- );
 
-CREATE TABLE livros (
-    id_livro_pk VARCHAR(80) NOT NULL,
-    -- genero VARCHAR(200) NOT NULL,
-    -- autor VARCHAR(40) NOT NULL,
-    numero VARCHAR(200) NOT NULL,
-    -- localizacao VARCHAR(500) NOT NULL,
-    -- editora VARCHAR(200) NOT NULL,
-    PRIMARY KEY (id_livro_pk)
-),
+-- CREATE TABLE cliente(
+--     id_pk VARCHAR(15) NOT NULL,
+--     nome VARCHAR(50) NOT NULL,
+--     reserva VARCHAR(100) NOT NULL,
+--     data_nascimento VARCHAR(8) NOT NULL,
+--     dados_pagamento VARCHAR(100) NOT NULL,
+--     email VARCHAR(50) NOT NULL,
+--     PRIMARY KEY (id_pk)
+-- );
 
-CREATE TABLE genero (
-    id_livro_fk VARCHAR(80) NOT NULL,
-    genero_pk VARCHAR(200) NOT NULL,
-    PRIMARY KEY (genero_pk),
-    FOREIGN KEY (id_livro_fk) REFERENCES livros (id_livro_pk)
-),
+CREATE TABLE livro(
+    isbn_pk VARCHAR(13) NOT NULL,
+    titulo VARCHAR(50) NOT NULL,
+    autor VARCHAR(50) NOT NULL,
+    editora VARCHAR(50),
+    ano_publicacao VARCHAR(4),
+    /*Atributo livraria*/
+    franquia_livraria VARCHAR(50) NOT NULL,
+    secao_livraria VARCHAR(30) NOT NULL,
+    prateleira_livraria VARCHAR(30) NOT NULL,
+    /**/
+    PRIMARY KEY (isbn_pk)
+);
 
-CREATE TABLE autor (
-    id_livro_fk VARCHAR(80) NOT NULL,
-    autor_pk VARCHAR(40) NOT NULL,
-    PRIMARY KEY (autor_pk),
-    FOREIGN KEY (id_livro_fk) REFERENCES livros (id_livro_pk)
-),
+CREATE TABLE genero(
+    isbn_pk_fk VARCHAR(13) NOT NULL,
+    genero_pk VARCHAR(20) NOT NULL,
+    FOREIGN KEY (isbn_pk_fk) REFERENCES livro (isbn_pk)
+);
 
-CREATE TABLE interesses (
-    id_cliente_fk VARCHAR(80) NOT NULL,
-    interesses_pk VARCHAR(200) NOT NULL,
-    PRIMARY KEY (interesses_pk),
-    FOREIGN KEY (id_cliente_fk) REFERENCES clientes (id_cliente_pk)
-),
+CREATE TABLE cliente(
+    id_pk VARCHAR(15) NOT NULL,
+    nome VARCHAR(50) NOT NULL,
+    data_nascimento VARCHAR(8) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    /*Atributo dados_pagamento*/
+    numero_cartao VARCHAR(16) NOT NULL,
+    dono_cartao VARCHAR(30) NOT NULL,
+    cpf_dono VARCHAR(15) NOT NULL,
+    codigo_seguranca VARCHAR(3) NOT NULL,
+    /**/
+    PRIMARY KEY (id_pk)
+);
 
-CREATE TABLE historico (
-    id_cliente_fk VARCHAR(80) NOT NULL,
-    historico_pk VARCHAR(4000) NOT NULL,
-    PRIMARY KEY (historico_pk),
-    FOREIGN KEY (id_cliente_fk) REFERENCES clientes (id_cliente_pk)
-),
+CREATE TABLE reserva(
+    codigo_reserva_pk VARCHAR(13) NOT NULL,
+    id_pk_fk VARCHAR(15) NOT NULL,
+    isbn_pk_fk VARCHAR(13) NOT NULL,
+    PRIMARY KEY (codigo_reserva_pk),
+    FOREIGN KEY (id_pk_fk) REFERENCES cliente (id_pk),
+    FOREIGN KEY (isbn_pk_fk) REFERENCES livro (isbn_pk)
+);
 
-CREATE TABLE data_de_nascimento (
-    dia VARCHAR(2) NOT NULL,
-    mes VARCHAR(2) NOT NULL,
-    ano VARCHAR(4) NOT NULL
-),
+INSERT INTO livro (isbn_pk, titulo, autor, editora, ano_publicacao, franquia_livraria, secao_livraria, prateleira_livraria)
+VALUES ('456789123', 'Os 3 Porquinhos', 'Joseph Jacobs', 'Girassol', '2009', 'Livraria Palhoça', '2', '4')
 
-CREATE TABLE nome_completo (
-    nome VARCHAR(20) NOT NULL,
-    sobrenome VARCHAR(40) NOT NULL
-),
+INSERT INTO genero (isbn_pk_fk, genero_pk)
+VALUES ('456789123', 'Infantil')
 
-CREATE TABLE cadastro (
-    usuario VARCHAR(20) NOT NULL,
-    senha VARCHAR(15) NOT NULL
-),
+INSERT INTO cliente (id_pk, nome, data_nascimento, email, numero_cartao, dono_cartao, cpf_dono, codigo_seguranca)
+VALUES ('1', 'Maria', '07102017', 'mariajulia@mail.com', '5236667890090965', 'MARIA JÚLIA', '789654120365489', '987')
 
-CREATE TABLE numero (
-    numero_de_serie VARCHAR(2) NOT NULL,
-    quantidade_da_serie VARCHAR(100) NOT NULL
-),
+INSERT INTO reserva (codigo_reserva_pk, id_pk_fk, isbn_pk_fk)
+VALUES ('123', '1', '456789123')
 
-CREATE TABLE localizacao (
-    biblioteca VARCHAR(25) NOT NULL,
-    setor VARCHAR(2) NOT NULL
-)
-
-INSERT INTO clientes (id_cliente_pk)
-VALUES ('12g32j2')
-
-INSERT INTO livros (id_livro_pk, numero)
-VALUES ('34hui21', '23')
-
-INSERT INTO genero (id_livro_fk, numero)
-VALUES ('34hui21', '23')
-
-INSERT INTO autor (id_livro_fk, numero)
-VALUES ('34hui21', '23')
-
-INSERT INTO interesses (id_cliente_fk, numero)
-VALUES ('12g32j2', '23')
-
-INSERT INTO historico (id_cliente_fk, numero)
-VALUES ('12g32j2', '23')
-
-INSERT INTO data_de_nascimento (dia, mes, ano)
-VALUES ('01', '06','2000')
-
-INSERT INTO nome_completo (nome, sobrenome)
-VALUES ('Vitor', 'Mateus')
-
-INSERT INTO cadastro (usuario, senha)
-VALUES ('vitor04', '213421')
-
-INSERT INTO numero (numero_de_serie, quantidade_da_serie)
-VALUES ('3', '2103')
-
-INSERT INTO localizacao (biblioteca, setor)
-VALUES ('biblioteca 1', '6')
-
-SELECT * FROM clientes
-SELECT * FROM livros
+SELECT * FROM livro
 SELECT * FROM genero
-SELECT * FROM autor
-SELECT * FROM interesses
-SELECT * FROM historico
-SELECT * FROM data_de_nascimento
-SELECT * FROM nome_completo
-SELECT * FROM cadastro
-SELECT * FROM numero
-SELECT * FROM localizacao
+SELECT * FROM cliente
+SELECT * FROM reserva
