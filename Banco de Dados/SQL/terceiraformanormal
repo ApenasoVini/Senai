@@ -1,40 +1,3 @@
--- CREATE TABLE funcionario (
-    -- id_funcionario_pk VARCHAR(20) NOT NULL,
-    -- nome_func VARCHAR(70) NOT NULL,
-    -- id_departamento_fk VARCHAR(20),
-    -- PRIMARY KEY (id_funcionario_pk),
-    -- FOREIGN KEY (id_departamento_fk) REFERENCES departamento (id_departamento_pk)
--- ),
-
--- CREATE TABLE departamento (
-    -- id_departamento_pk VARCHAR(20) NOT NULL,
-    -- nome_dep VARCHAR(30) NOT NULL,
-    -- PRIMARY KEY (id_departamento_pk)
--- )
-
-
-
--- CREATE TABLE funcionario (
-    -- id_funcionario_pk VARCHAR(20) NOT NULL,
-    -- nome_func VARCHAR(50) NOT NULL,
-    -- PRIMARY KEY (id_funcionario_pk),
--- ),
-
--- CREATE TABLE departamento (
-    -- id_departamento_pk VARCHAR(20) NOT NULL,
-    -- nome_dep VARCHAR(30) NOT NULL,
-    -- PRIMARY KEY (id_departamento_pk)
--- ),
-
--- CREATE TABLE funcionario_departamento (
-    -- id_departamento_fk VARCHAR(20) NOT NULL,
-    -- id_funcionario_fk VARCHAR(20) NOT NULL,
-    -- FOREIGN KEY (id_departamento_fk) REFERENCES departamento (id_departamento_pk),
-    -- FOREIGN KEY (id_funcionario_fk) REFERENCES funcionario (id_funcionario_pk)
--- )
-
-
-
 CREATE TABLE cliente (
 nome_cliente_pk VARCHAR(50) NOT NULL,
 PRIMARY KEY (nome_cliente_pk)
@@ -75,9 +38,17 @@ VALUES ('ffjhs43fg55')
 INSERT INTO produto (id_produto_pk, nome_produto, categoria_produto)
 VALUES ('fgd4trdfv', 'Hambúrguer Simples', 'Produto Alimentício')
 
+INSERT INTO pedido_produto (id_pedido_fk, id_produto_fk)
+VALUES ('ffjhs43fg55','fgd4trdfv')
+
+INSERT INTO pedido_cliente (id_pedido_fk, nome_cliente_fk)
+VALUES ('ffjhs43fg55', 'João')
+
 SELECT * FROM cliente
 SELECT * FROM pedido
 SELECT * FROM produto
+SELECT * FROM pedido_cliente
+SELECT * FROM pedido_produto
 
 -- Esta tabela está na 1ª forma normal pois não apresenta atributos multivalorados ou compostos 
 -- e na segunda forma pois os atributos dependem da chave primária
