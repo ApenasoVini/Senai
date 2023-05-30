@@ -83,3 +83,12 @@ SELECT * FROM habilidade
 SELECT * FROM funcionario_departamento
 SELECT * FROM projeto_departamento
 SELECT * FROM funcionario_habilidade
+
+-- Primeira Forma Normal (1NF):
+-- Não há atributos multivalorados ou compostos
+
+-- Segunda Forma Normal (2NF):
+-- Não há dependências parciais em nenhuma das tabelas, elas estão divididas corretamente e possuem tabelas de relação.
+
+-- Terceira Forma Normal (3NF):
+-- Os atributos que não são chave primária dependem apenas da chave primária de suas tabelas e não de outros atributos normais.

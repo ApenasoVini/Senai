@@ -76,3 +76,12 @@ SELECT * FROM produto
 SELECT * FROM cliente_pedido
 SELECT * FROM pedido_produto
 SELECT * FROM telefone
+
+-- Primeira Forma Normal (1NF):
+-- Não há atributos multivalorados ou compostos (divisão do endereço e separação do telefone)
+
+-- Segunda Forma Normal (2NF):
+-- Não há dependências parciais em nenhuma das tabelas, elas estão divididas corretamente e possuem tabelas de relação.
+
+-- Terceira Forma Normal (3NF):
+-- Os atributos que não são chave primária dependem apenas da chave primária de suas tabelas e não de outros atributos normais.
