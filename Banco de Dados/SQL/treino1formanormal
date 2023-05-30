@@ -43,3 +43,31 @@ CREATE TABLE funcionario_habilidade(
     FOREIGN KEY (id_funcionario_fk) REFERENCES funcionario (id_funcionario_pk),
     FOREIGN KEY (id_habilidade_fk) REFERENCES habilidade (id_habilidade_pk)
 )
+
+INSERT INTO funcionario (id_funcionario_pk, nome, salario, data_admissao)
+VALUES ('1', 'João Silva', 5000, '2022-01-15');
+VALUES ('2', 'Maria Santos', 6000, '2021-09-30');
+
+INSERT INTO departamento (id_departamento_pk, nome, localizacao)
+VALUES ('A', 'RH', 'São Paulo');
+VALUES ('B', 'Financeiro', 'Rio de Janeiro');
+
+INSERT INTO projeto (id_projeto_pk, nome, data_inicio, data_conclusao)
+VALUES ('P1', 'Projeto A', '2022-03-01', '2022-06-30');
+VALUES ('P2', 'Projeto B', '2023-01-15', '2023-08-31');
+
+INSERT INTO habilidade (id_habilidade_pk, descricao)
+VALUES ('H1', 'Programação');
+VALUES ('H2', 'Gestão de Pessoas');
+
+INSERT INTO funcionario_departamento (id_funcionario_fk, id_departamento_fk)
+VALUES ('1', 'A');
+VALUES ('2', 'B');
+
+INSERT INTO projeto_departamento (id_projeto_fk, id_departamento_fk)
+VALUES ('P1', 'A');
+VALUES ('P2', 'B');
+
+INSERT INTO funcionario_habilidade (id_funcionario_fk, id_habilidade_fk)
+VALUES ('1', 'H1');
+VALUES ('2', 'H2');
