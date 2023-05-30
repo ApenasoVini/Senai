@@ -1,0 +1,45 @@
+CREATE TABLE funcionario (
+    id_funcionario_pk VARCHAR(20) NOT NULL,
+    nome VARCHAR(30) NOT NULL,
+    salario INT NOT NULL,
+    data_admissao DATE NOT NULL
+);
+
+CREATE TABLE departamento (
+    id_departamento_pk VARCHAR(20) NOT NULL,
+    nome VARCHAR(30) NOT NULL,
+    localizacao VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE projeto (
+    id_projeto_pk VARCHAR(20) NOT NULL,
+    nome VARCHAR(30) NOT NULL,
+    data_inicio DATE NOT NULL,
+    data_conclusao DATE NOT NULL,
+);
+
+CREATE TABLE habilidade (
+    id_habilidade_pk VARCHAR(20) NOT NULL,
+    descricao VARCHAR(30) NOT NULL,
+);
+
+CREATE TABLE funcionario_departamento (
+    id_funcionario_fk VARCHAR(20) NOT NULL,
+    id_departamento_fk VARCHAR(20) NOT NULL,
+    FOREIGN KEY (id_funcionario_fk) REFERENCES funcionario (id_funcionario_pk),
+    FOREIGN KEY (id_departamento_fk) REFERENCES departamento (id_departamento_pk)
+);
+
+CREATE TABLE projeto_departamento(
+    id_departamento_fk VARCHAR(20) NOT NULL,
+    id_projeto_fk VARCHAR(20) NOT NULL,
+    FOREIGN KEY (id_projeto_fk) REFERENCES projeto (id_projeto_pk),
+    FOREIGN KEY (id_departamento_fk) REFERENCES departamento (id_departamento_pk)
+);
+
+CREATE TABLE funcionario_habilidade(
+    id_funcionario_fk VARCHAR(20) NOT NULL,
+    id_habilidade_fk VARCHAR(20) NOT NULL,
+    FOREIGN KEY (id_funcionario_fk) REFERENCES funcionario (id_funcionario_pk),
+    FOREIGN KEY (id_habilidade_fk) REFERENCES habilidade (id_habilidade_pk)
+)
