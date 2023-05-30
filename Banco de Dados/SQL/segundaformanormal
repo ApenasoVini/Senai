@@ -3,14 +3,14 @@ CREATE TABLE empresa (
     cep INT NOT NULL,
     complemento_endereco VARCHAR(40),
     PRIMARY KEY (id_empresa_pk)
-),
+);
 
 CREATE TABLE empregado (
     id_empregado_pk VARCHAR(10) NOT NULL,
     nome_empregado VARCHAR(25) NOT NULL,
     horas_semanais VARCHAR(100) NOT NULL,
     PRIMARY KEY (id_empregado_pk)
-),
+);
 
 CREATE TABLE empresa_empregado (
     id_empresa_fk VARCHAR(20) NOT NULL,

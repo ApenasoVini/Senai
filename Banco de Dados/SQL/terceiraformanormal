@@ -41,13 +41,13 @@ VALUES ('fgd4trdfv', 'Hambúrguer Simples', 'Produto Alimentício')
 INSERT INTO pedido_produto (id_pedido_fk, id_produto_fk)
 VALUES ('ffjhs43fg55','fgd4trdfv')
 
-INSERT INTO pedido_cliente (id_pedido_fk, nome_cliente_fk)
+INSERT INTO cliente_pedido (id_pedido_fk, nome_cliente_fk)
 VALUES ('ffjhs43fg55', 'João')
 
 SELECT * FROM cliente
 SELECT * FROM pedido
 SELECT * FROM produto
-SELECT * FROM pedido_cliente
+SELECT * FROM cliente_pedido
 SELECT * FROM pedido_produto
 
 -- Esta tabela está na 1ª forma normal pois não apresenta atributos multivalorados ou compostos 
