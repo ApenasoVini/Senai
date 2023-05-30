@@ -2,13 +2,15 @@ CREATE TABLE funcionario (
     id_funcionario_pk VARCHAR(20) NOT NULL,
     nome VARCHAR(30) NOT NULL,
     salario INT NOT NULL,
-    data_admissao DATE NOT NULL
+    data_admissao DATE NOT NULL,
+    PRIMARY KEY (id_funcionario_pk)
 );
 
 CREATE TABLE departamento (
     id_departamento_pk VARCHAR(20) NOT NULL,
     nome VARCHAR(30) NOT NULL,
-    localizacao VARCHAR(30) NOT NULL
+    localizacao VARCHAR(30) NOT NULL,
+    PRIMARY KEY (id_departamento_pk)
 );
 
 CREATE TABLE projeto (
@@ -16,11 +18,13 @@ CREATE TABLE projeto (
     nome VARCHAR(30) NOT NULL,
     data_inicio DATE NOT NULL,
     data_conclusao DATE NOT NULL,
+    PRIMARY KEY (id_projeto_pk)
 );
 
 CREATE TABLE habilidade (
     id_habilidade_pk VARCHAR(20) NOT NULL,
     descricao VARCHAR(30) NOT NULL,
+    PRIMARY KEY (id_habilidade_pk)
 );
 
 CREATE TABLE funcionario_departamento (
@@ -71,3 +75,11 @@ VALUES ('P2', 'B');
 INSERT INTO funcionario_habilidade (id_funcionario_fk, id_habilidade_fk)
 VALUES ('1', 'H1');
 VALUES ('2', 'H2');
+
+SELECT * FROM funcionario
+SELECT * FROM departamento
+SELECT * FROM projeto
+SELECT * FROM habilidade
+SELECT * FROM funcionario_departamento
+SELECT * FROM projeto_departamento
+SELECT * FROM funcionario_habilidade

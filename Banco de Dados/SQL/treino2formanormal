@@ -13,7 +13,7 @@ CREATE TABLE cliente (
 CREATE TABLE telefone (
     id_cliente_fk VARCHAR(20) NOT NULL,
     telefone_pk INT NOT NULL,
-    PRIMARY KEY (telefone_pk)
+    PRIMARY KEY (telefone_pk),
     FOREIGN KEY (id_cliente_fk) REFERENCES cliente (id_cliente_pk)
 );
 
@@ -69,3 +69,10 @@ VALUES ('PR2', 'P2');
 INSERT INTO cliente_pedido (id_cliente_fk, id_pedido_fk)
 VALUES ('1', 'P1');
 VALUES ('2', 'P2');
+
+SELECT * FROM cliente
+SELECT * FROM pedido
+SELECT * FROM produto
+SELECT * FROM cliente_pedido
+SELECT * FROM pedido_produto
+SELECT * FROM telefone
