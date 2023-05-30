@@ -1,12 +1,20 @@
 CREATE TABLE cliente (
-nome_cliente_pk VARCHAR(50) NOT NULL,
-estado VARCHAR(30) NOT NULL,
-cidade VARCHAR(30) NOT NULL,
-bairro VARCHAR(30) NOT NULL,
-rua VARCHAR(50) NOT NULL,
-complemento VARCHAR(50) NOT NULL,
-telefone INT NOT NULL,
-PRIMARY KEY (nome_cliente_pk)
+    id_cliente_pk VARCHAR(20) NOT NULL,
+    nome_cliente VARCHAR(50) NOT NULL,
+    --  Referente ao atributo endereço
+    estado VARCHAR(30) NOT NULL,
+    cidade VARCHAR(30) NOT NULL,
+    bairro VARCHAR(30) NOT NULL,
+    rua VARCHAR(50) NOT NULL,
+    complemento VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id_cliente_pk)
+);
+
+CREATE TABLE telefone (
+    id_cliente_fk VARCHAR(20) NOT NULL,
+    telefone_pk INT NOT NULL,
+    PRIMARY KEY (telefone_pk)
+    FOREIGN KEY (id_cliente_fk) REFERENCES cliente (id_cliente_pk)
 );
 
 CREATE TABLE pedido (
@@ -32,8 +40,9 @@ FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
 );
 
 CREATE TABLE cliente_pedido (
-nome_cliente_fk VARCHAR(50) NOT NULL,
+id_cliente_fk VARCHAR(50) NOT NULL,
 id_pedido_fk VARCHAR(20) NOT NULL,
-FOREIGN KEY (nome_cliente_fk) REFERENCES cliente (nome_cliente_pk),
+FOREIGN KEY (id_cliente_fk) REFERENCES cliente (id_cliente_pk),
 FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
 )
+
