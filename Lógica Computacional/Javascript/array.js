@@ -1,17 +1,17 @@
 function arrays() {
 
-    var soares = []
-    var posicao = soares.indexOf("Selma")
-    soares.push("Vinícius")
-    soares.push("Selma")
-    soares.push("Reinaldo")
-    alert(soares)
+    var familia = []
+    var posicao = familia.indexOf("Selma")
+    familia.push("Vinícius")
+    familia.push("Selma")
+    familia.push("Reinaldo")
+    alert(familia)
 
-    soares[2] = "Anderson"
-    alert(soares)
+    familia[2] = "Anderson"
+    alert(familia)
 
-    soares.splice(posicao, 1)
-    alert(soares)
+    familia.splice(posicao, 1)
+    alert(familia)
 }
 
 arrays()
