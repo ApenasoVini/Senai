@@ -9,7 +9,7 @@ function media() {
             soma += Number(prompt("Digite o " + i + "º número:"))
         }
         resultado = soma / n
-        alert(resultado)
+        alert("A média é " +resultado)
     }
-    
+
 media()

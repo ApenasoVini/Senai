@@ -13,3 +13,5 @@ function arrays() {
     soares.splice(posicao, 1)
     alert(soares)
 }
+
+arrays()
