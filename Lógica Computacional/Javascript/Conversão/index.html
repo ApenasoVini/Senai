@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUT</title>
+    <title>Medir Temperatura</title>
 </head>
 
 <body>
@@ -21,22 +21,21 @@
     <div class="geral">
         <!--input do tipo number (usa números), que usa um valor escrito pelo usuário-->
         <input id="temperatura" type="number" placeholder="Digite a temperatura"><br>
-        <div class="radios">
+        <br>
+        <!--input do mesmo nome do tipo "radio", com o mesmo nome é possível selecionar apenas um por vez-->
 
-            <!--input do mesmo nome do tipo "radio", com o mesmo nome é possível selecionar apenas um por vez-->
-
-            <input id="cf" name="tipo" type="radio">Celsius para Fahrenheit</input><br>
-            <input id="ck" name="tipo" type="radio">Celsius para Kelvin</input><br>
-            <input id="fc" name="tipo" type="radio">Fahrenheit para Celsius</input><br>
-            <input id="fk" name="tipo" type="radio">Fahrenheit para Kelvin</input><br>
-            <input id="kc" name="tipo" type="radio">Kelvin para Celsius</input><br>
-            <input id="kf" name="tipo" type="radio">Kelvin para Fahrenheit</input><br>
-        </div>
+        <input id="cf" name="tipo" type="radio">Celsius para Fahrenheit</input><br>
+        <input id="ck" name="tipo" type="radio">Celsius para Kelvin</input><br>
+        <input id="fc" name="tipo" type="radio">Fahrenheit para Celsius</input><br>
+        <input id="fk" name="tipo" type="radio">Fahrenheit para Kelvin</input><br>
+        <input id="kc" name="tipo" type="radio">Kelvin para Celsius</input><br>
+        <input id="kf" name="tipo" type="radio">Kelvin para Fahrenheit</input><br>
+        <br>
 
         <!--botão que está ligado a função converter-->
 
         <button onclick="converte()" type="button" id="botao">Converter</button><br>
-
+        <br>
         <!--texto do resultado-->
         <p id="resultado">Resultado</p>
     </div>
