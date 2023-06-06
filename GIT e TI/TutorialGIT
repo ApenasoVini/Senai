@@ -14,3 +14,16 @@ Utilizando o GitBash
 7) Comando 'git commit -m "Versão atual do projeto";
 8) Comando 'git push --set-upstream origin main'
 -------------------------------------
+
+------Branch------------------
+1) Criar Branch = 'git branch nome_da_branch';
+2) Entrar em uma Branch existente = 'git checkout nome_da_branch';
+3) Criar e entrar na Branch = 'git checkout -b nome_da_branch';
+4) Listar Branches = 'git branch';
+5) Deletar Branch = 'git branch -d nome_da_branch';
+6) Renomear Branch = 'git branch -m nome_atual novo_nome';
+7) Acessar histórico da Branch = 'git log nome_da_branch';
+8) Comando 'git add .';
+9) Comando 'git commit -m "Versão atual do projeto";
+10) Comando 'git push –u origin nome_da_branch'
+-------------------------------------
