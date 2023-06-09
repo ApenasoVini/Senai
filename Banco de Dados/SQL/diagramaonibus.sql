@@ -4,7 +4,7 @@ CREATE TABLE usuario (
     id_pk VARCHAR(36) NOT NULL,
     lista VARCHAR(50000) NOT NULL,
     PRIMARY KEY (id_pk)
-)
+);
 
 CREATE TABLE aplicativo_de_onibus (
     nome_pk VARCHAR(40) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE aplicativo_de_onibus (
     FOREIGN KEY (tabela_linhas_fk) REFERENCES linhas (tabela_linhas_pk),
     FOREIGN KEY (id_fk) REFERENCES usuario (id_pk),
     FOREIGN KEY (cnpj_fk) REFERENCES empresas (cnpj_pk)
-)
+);
 
 CREATE TABLE empresas (
     nome VARCHAR(60) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE empresas (
     placa_fk VARCHAR(7) NOT NULL,
     PRIMARY KEY (cnpj_pk),
     FOREIGN KEY (placa_fk) REFERENCES onibus (placa_pk)
-)
+);
 
 CREATE TABLE onibus (
     motorista VARCHAR(30) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE onibus (
     PRIMARY KEY (placa_pk),
     FOREIGN KEY (tabela_horarios_fk) REFERENCES horarios (tabela_horarios_pk),
     FOREIGN KEY (tabela_linhas_fk) REFERENCES linhas (tabela_linhas_pk)
-)
+);
 
 CREATE TABLE linhas (
     tabela_linhas_pk VARCHAR(50000) NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE linhas (
     ruas VARCHAR(10000) NOT NULL,
     cidades VARCHAR(2000) NOT NULL,
     PRIMARY KEY (tabela_linhas_pk)
-)
+);
 
 CREATE TABLE horarios (
     tabela_horarios_pk VARCHAR(4000) NOT NULL,

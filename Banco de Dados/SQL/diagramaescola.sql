@@ -5,7 +5,7 @@ turma VARCHAR(10) NOT NULL,
 itinerario VARCHAR(100) NOT NULL,
 cpf_pk VARCHAR(15) NOT NULL,
 PRIMARY KEY(cpf_pk)
-)
+);
 
 CREATE TABLE escola (
     nome VARCHAR(50) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE escola (
     cpf_fk VARCHAR(15) NOT NULL,
     PRIMARY KEY(cnpj_pk),
     FOREIGN KEY(cpf_fk) REFERENCES aluno (cpf_pk) 
-)
+);
 
 INSERT INTO aluno (nome, idade, turma, itinerario, cpf_pk) 
 VALUES ('Vinícius',16,'2C','tecnico integrado','124.941.699-09')
