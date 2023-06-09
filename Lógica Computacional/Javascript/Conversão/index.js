@@ -1,4 +1,3 @@
-//início da função 
 function converte() {
 
     var temperatura = Number(document.getElementById("temperatura").value)
