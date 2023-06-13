@@ -18,18 +18,18 @@ CREATE TABLE restaurante (
     cnpj INT PRIMARY KEY,
     nome_restaurante VARCHAR(20) NOT NULL,
     lucro INT NOT NULL,
-    funcionarios VARCHAR(700) NOT NULL,
+    funcionarios VARCHAR(700) NOT NULL
 );
 
 CREATE TABLE pedido (
 id_pedido VARCHAR(20) PRIMARY KEY,
-quantidade INT NOT NULL,
+quantidade INT NOT NULL
 );
 
 CREATE TABLE delivery (
 id_delivery VARCHAR(20) PRIMARY KEY,
 quantidade INT NOT NULL,
-localizacao VARCHAR (260) NOT NULL,
+localizacao VARCHAR (260) NOT NULL
 );
 
 CREATE TABLE alimento (
@@ -38,29 +38,29 @@ preco INT NOT NULL
 );
 
 CREATE TABLE pedido_alimento (
-id_produto_fk VARCHAR(20) NOT NULL,
-id_pedido_fk VARCHAR(20) NOT NULL,
-FOREIGN KEY (id_produto_fk) REFERENCES produto (id_produto_pk),
-FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
+id_pedido VARCHAR(20) NOT NULL,
+nome_alimento VARCHAR(40) NOT NULL,
+FOREIGN KEY (id_pedido) REFERENCES pedido (id_pedido),
+FOREIGN KEY (nome_alimento) REFERENCES alimento (nome_alimento)
 );
 
 CREATE TABLE cliente_pedido (
-id_cliente_fk VARCHAR(50) NOT NULL,
-id_pedido_fk VARCHAR(20) NOT NULL,
-FOREIGN KEY (id_cliente_fk) REFERENCES cliente (id_cliente_pk),
-FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
+nome_cliente VARCHAR(50) NOT NULL,
+nome_alimento VARCHAR(40) NOT NULL,
+FOREIGN KEY (nome_cliente) REFERENCES cliente (nome_cliente),
+FOREIGN KEY (nome_alimento) REFERENCES alimento (nome_alimento)
 );
 
 CREATE TABLE cliente_alimento (
-id_produto_fk VARCHAR(20) NOT NULL,
-id_pedido_fk VARCHAR(20) NOT NULL,
-FOREIGN KEY (id_produto_fk) REFERENCES produto (id_produto_pk),
-FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
+nome_cliente VARCHAR(50) NOT NULL,
+nome_alimento VARCHAR(40) NOT NULL,
+FOREIGN KEY (nome_cliente) REFERENCES cliente (nome_cliente),
+FOREIGN KEY (nome_alimento) REFERENCES alimento (nome_alimento)
 );
 
 CREATE TABLE pedido_delivery (
-id_produto_fk VARCHAR(20) NOT NULL,
-id_pedido_fk VARCHAR(20) NOT NULL,
-FOREIGN KEY (id_produto_fk) REFERENCES produto (id_produto_pk),
-FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
+id_pedido VARCHAR(20) NOT NULL,
+id_delivery VARCHAR(20) NOT NULL,
+FOREIGN KEY (id_pedido) REFERENCES pedido (id_pedido),
+FOREIGN KEY (id_delivery) REFERENCES delivery (id_delivery)
 );
