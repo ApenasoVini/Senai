@@ -22,28 +22,22 @@ CREATE TABLE restaurante (
 );
 
 CREATE TABLE pedido (
-id_pedido_pk VARCHAR(20) NOT NULL,
+id_pedido VARCHAR(20) PRIMARY KEY,
 quantidade INT NOT NULL,
-data_pedido DATE NOT NULL,
-PRIMARY KEY (id_pedido_pk)
 );
 
 CREATE TABLE delivery (
-id_pedido_pk VARCHAR(20) NOT NULL,
+id_delivery VARCHAR(20) PRIMARY KEY,
 quantidade INT NOT NULL,
-data_pedido DATE NOT NULL,
-PRIMARY KEY (id_pedido_pk)
+localizacao VARCHAR (260) NOT NULL,
 );
 
 CREATE TABLE alimento (
-id_produto_pk VARCHAR(20) NOT NULL,
-nome_produto VARCHAR(50) NOT NULL,
-categoria VARCHAR(20) NOT NULL,
-preco INT NOT NULL,
-PRIMARY KEY (id_produto_pk)
+nome_alimento VARCHAR(40) PRIMARY KEY,
+preco INT NOT NULL
 );
 
-CREATE TABLE pedido_produto (
+CREATE TABLE pedido_alimento (
 id_produto_fk VARCHAR(20) NOT NULL,
 id_pedido_fk VARCHAR(20) NOT NULL,
 FOREIGN KEY (id_produto_fk) REFERENCES produto (id_produto_pk),
@@ -55,4 +49,18 @@ id_cliente_fk VARCHAR(50) NOT NULL,
 id_pedido_fk VARCHAR(20) NOT NULL,
 FOREIGN KEY (id_cliente_fk) REFERENCES cliente (id_cliente_pk),
 FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
-)
+);
+
+CREATE TABLE cliente_alimento (
+id_produto_fk VARCHAR(20) NOT NULL,
+id_pedido_fk VARCHAR(20) NOT NULL,
+FOREIGN KEY (id_produto_fk) REFERENCES produto (id_produto_pk),
+FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
+);
+
+CREATE TABLE pedido_delivery (
+id_produto_fk VARCHAR(20) NOT NULL,
+id_pedido_fk VARCHAR(20) NOT NULL,
+FOREIGN KEY (id_produto_fk) REFERENCES produto (id_produto_pk),
+FOREIGN KEY (id_pedido_fk) REFERENCES pedido (id_pedido_pk)
+);
