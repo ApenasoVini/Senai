@@ -1,30 +1,42 @@
 CREATE TABLE estadio (
-  id SERIAL PRIMARY KEY,
-  nome VARCHAR(50) NOT NULL
+  cnpj INT PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL,
+  equipe VARCHAR(15)
 );
 
 CREATE TABLE setores (
-  id SERIAL PRIMARY KEY,
-  nome VARCHAR(50) NOT NULL
+  id_setor INT PRIMARY KEY,
+  nome VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE funcoes (
-  id SERIAL PRIMARY KEY,
-  nome VARCHAR(50) NOT NULL
+  nome VARCHAR(20) PRIMARY KEY,
+  horario VARCHAR(100)
 );
 
 CREATE TABLE funcionarios (
-  id SERIAL PRIMARY KEY,
-  nome VARCHAR(100) NOT NULL,
-  setor_id INT REFERENCES setores(id),
-  funcao_id INT REFERENCES funcoes(id),
-  carga_horaria INT
+  id_funcionario INT PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL,
+  carga_horaria INT NOT NULL
 );
 
-CREATE TABLE horarios_trabalho (
-  id SERIAL PRIMARY KEY,
-  funcionario_id INT REFERENCES funcionarios(id),
-  dia_semana VARCHAR(20) NOT NULL,
-  horario_inicio TIME,
-  horario_fim TIME
+CREATE TABLE estadio_setores (
+  cnpj INT NOT NULL,
+  id_setor INT NOT NULL,
+  FOREIGN KEY (id_setor) REFERENCES setores (id_setor),
+  FOREIGN KEY (cnpj) REFERENCES estadio (cnpj)
+);
+
+CREATE TABLE funcoes_funcionarios (
+  id_funcionarios INT NOT NULL,
+  nome VARCHAR(20) NOT NULL,
+  FOREIGN KEY (nome) REFERENCES funcoes (nome),
+  FOREIGN KEY (id_funcionarios) REFERENCES funcionarios (id_funcionarios)
+);
+
+CREATE TABLE funcionarios_setores (
+  id_funcionarios INT NOT NULL,
+  id_setor INT NOT NULL,
+  FOREIGN KEY (id_setor) REFERENCES setores (id_setor),
+  FOREIGN KEY (id_funcionarios) REFERENCES funcionarios (id_funcionarios)
 );
