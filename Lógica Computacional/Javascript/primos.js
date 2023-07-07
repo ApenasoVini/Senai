@@ -20,7 +20,6 @@ function primos() {
         }
         numero++;
     }
-
     alert("A quantidade de primos é: " + quantidade);
 }
 
