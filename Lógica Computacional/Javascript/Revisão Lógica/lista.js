@@ -24,62 +24,21 @@ function fatorial() {
 }
 fatorial();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Primos
 function primos() {
   var num3 = prompt("Digite um número: ");
   var div = 0
 
-  for (i = 0; i < num3; i++) {
+  for (var i = 0; i <= num3; i++) {
     if (num3 % i == 0) {
       div++;
     }
   }
 
-  div == 2 ? alert(num3 + " é primo") : alert(num3 + " não é primo");
+return div == 2 ? alert(num3 + " é primo") : alert(num3 + " não é primo");
 
 }
 primos()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 4- Calcular a sequência de Fibonacci
 // 10 = [0,1,1,2,3,5,8,13,21,34]
