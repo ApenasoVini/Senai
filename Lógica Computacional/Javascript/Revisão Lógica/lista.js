@@ -1,6 +1,6 @@
 //Par ou Ímpar
 function par() {
-  var num = prompt("Escolha um número");
+  var num = prompt("Escolha um número: ");
   if (num % 2 === 0) {
     alert("par");
   } else {
@@ -11,7 +11,7 @@ par();
 
 //Fatorial
 function fatorial() {
-  var num2 = prompt("Escolha um número");
+  var num2 = prompt("Escolha um número: ");
   if (num2 == 0) {
     alert(1)
   }
@@ -35,7 +35,7 @@ function primos() {
     }
   }
 
-return div == 2 ? alert(num3 + " é primo") : alert(num3 + " não é primo");
+  return div == 2 ? alert(num3 + " é primo") : alert(num3 + " não é primo");
 
 }
 primos()
