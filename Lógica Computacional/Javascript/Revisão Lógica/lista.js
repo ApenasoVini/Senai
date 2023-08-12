@@ -40,8 +40,22 @@ function primos() {
 }
 primos()
 
-// 4- Calcular a sequência de Fibonacci
-// 10 = [0,1,1,2,3,5,8,13,21,34]
+//Fibonacci
+ function fibonacci() {
+  var num4 = prompt("Digite um número: ");
+  var div = 0
+
+  for (var i = 0; i <= num4; i++) {
+    if (num4 % i == 0) {
+      div++;
+    }
+  }
+
+  return div == 2 ? alert(num4 + " é primo") : alert(num4 + " não é primo");
+
+}
+fibonacci()
+
 
 // 5- Inverter uma string.
 // Javascript = “tpircsavaJ”
