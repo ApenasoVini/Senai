@@ -34,28 +34,23 @@ function primos() {
       div++;
     }
   }
-
   return div == 2 ? alert(num3 + " é primo") : alert(num3 + " não é primo");
-
 }
 primos()
 
 //Fibonacci
  function fibonacci() {
-  var num4 = prompt("Digite um número: ");
-  var div = 0
+  var num4 = prompt("Digite a quantidade de números na sequência: ");
+  var pos = 1
 
   for (var i = 0; i <= num4; i++) {
     if (num4 % i == 0) {
-      div++;
+      pos++;
     }
   }
-
-  return div == 2 ? alert(num4 + " é primo") : alert(num4 + " não é primo");
-
+  return pos == 2 ? alert(num4 + " é primo") : alert(num4 + " não é primo");
 }
 fibonacci()
-
 
 // 5- Inverter uma string.
 // Javascript = “tpircsavaJ”
