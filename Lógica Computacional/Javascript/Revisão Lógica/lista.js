@@ -39,18 +39,23 @@ function primos() {
 primos()
 
 //Fibonacci
- function fibonacci() {
+function fibonacci() {
+  const seq = [1, 1];
   var num4 = prompt("Digite a quantidade de números na sequência: ");
-  var pos = 1
 
-  for (var i = 0; i <= num4; i++) {
-    if (num4 % i == 0) {
-      pos++;
+  if (num4 == 1) {
+    alert("Sequência: " + seq.splice(1));
+  } else if (num4 == 2) {
+    alert("Sequência: " + seq);
+  } else {
+    
+    for (var i = 2; i < num4; i++) {
+      seq.push(seq[i - 1] + seq[i - 2]);
     }
+    alert("Sequência: " + seq);
   }
-  return pos == 2 ? alert(num4 + " é primo") : alert(num4 + " não é primo");
 }
-fibonacci()
+fibonacci();
 
 // 5- Inverter uma string.
 // Javascript = “tpircsavaJ”
