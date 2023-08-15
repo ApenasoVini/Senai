@@ -48,7 +48,7 @@ function fibonacci() {
   } else if (num4 == 2) {
     alert("Sequência: " + seq);
   } else {
-    
+
     for (var i = 2; i < num4; i++) {
       seq.push(seq[i - 1] + seq[i - 2]);
     }
@@ -57,23 +57,84 @@ function fibonacci() {
 }
 fibonacci();
 
-// 5- Inverter uma string.
-// Javascript = “tpircsavaJ”
+//String invertida
+function invertString() {
+  var str = prompt("Esreva algo: ")
+  alert(str.split("").reverse().join(""));
+}
+invertString()
 
-// 6- Encontre os números pares em um array.
-// [1,2,3,4,5,6,7,8] = [2,4,6,8]
+//Números pares em array.
+function arrayPar() {
+  var nums = prompt("Digite os números: ");
+  var numArray = nums.split("");
+  let numspares = [];
 
-// 7- Verificar se uma palavra é um palíndromo.
-// ovo true
-// uva false
+  for (var i = 0; i < numArray.length; i++) {
+    if (numArray[i] % 2 == 0) {
+      numspares.push(numArray[i]);
+    }
+  }
+  alert(numspares);
+}
+arrayPar();
 
-// 8- Contar as vogais em uma palavra.
-// maçã = 2
-// banana = 3
+//Palíndromo.
+function palindromo() {
+  var palavraInicial = prompt("Esreva algo: ")
+  var palavra = palavraInicial.toLowerCase()
+  var palavraInv = palavra.split("").reverse().join("");
 
-// 9- Calcular a soma dos números pares em um intervalo de valores.
-// (1, 10) = 30
+  if (palavra === palavraInv) {
+    alert(palavraInicial + " é um palíndromo")
+  }
+  else {
+    alert(palavraInicial + " não é um palíndromo")
+  }
+}
+palindromo()
 
-// 10- Uma função que receba dois números inteiros e faça a multiplicação deles sem
-// utilizar a multiplicação.
-// 5 = 25.
+//Vogais
+function vogais() {
+  var palavra = prompt("Digite uma palavra: ");
+  var letras = palavra.split("");
+  let vogal = [];
+
+  for (var i = 0; i < letras.length; i++) {
+    if (letras[i] === "a" || letras[i] === "e" || letras[i] === "i" || letras[i] === "o" || letras[i] === "u") {
+      vogal.push(letras[i]);
+    }
+  }
+  alert(vogal);
+}
+vogais();
+
+//Soma dos pares.
+function SomaPares() {
+  var inicio = parseInt(prompt("Digite o primeiro número: "));
+  var fim = parseInt(prompt("Digite o último número: "));
+  var soma = 0;
+
+  for (var i = inicio; i <= fim; i++) {
+    if (i % 2 == 0) {
+      soma += i;
+    }
+  }
+  alert(soma);
+}
+SomaPares();
+
+//Multiplicação
+function multiplicacao() {
+  var numero = parseInt(prompt("Digite o número: "));
+  var vezes = parseInt(prompt("Digite a quantidade de vezes: "));
+  var resultado = 1;
+
+  for (var i = inicio; i <= fim; i++) {
+    if (i % 2 == 0) {
+      resultado += i;
+    }
+  }
+  alert(resultado);
+}
+multiplicacao();
