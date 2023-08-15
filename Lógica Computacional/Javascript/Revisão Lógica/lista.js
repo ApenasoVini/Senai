@@ -128,12 +128,10 @@ SomaPares();
 function multiplicacao() {
   var numero = parseInt(prompt("Digite o número: "));
   var vezes = parseInt(prompt("Digite a quantidade de vezes: "));
-  var resultado = 1;
+  var resultado = 0;
 
-  for (var i = inicio; i <= fim; i++) {
-    if (i % 2 == 0) {
-      resultado += i;
-    }
+  for (var i = 0; i < vezes; i++) {
+    resultado += numero;
   }
   alert(resultado);
 }
