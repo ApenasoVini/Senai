@@ -1,10 +1,27 @@
-* {
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-body {
-    background-color: lightblue;
+table {
+    border-collapse: collapse;
+    display: flex;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+td {
+    width: 100px;
+    height: 100px;
 }
