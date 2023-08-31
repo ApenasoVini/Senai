@@ -1,10 +1,8 @@
 body {
-    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,16 +10,23 @@ body {
 
 table {
     border-collapse: collapse;
-    display: flex;
+    margin: 10%;
 }
 
 table,
 th,
 td {
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 td {
     width: 100px;
     height: 100px;
+}
+
+hr {
+    width: 0;
+    height: 350px;
+    border: 2px solid black;
+    margin: 0;
 }
