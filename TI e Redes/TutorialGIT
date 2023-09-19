@@ -6,12 +6,12 @@ Utilizando o GitBash
 -------------------------------------
 
 ------Commit e Push------------------
-1) Configurar seu nome de usuário através do comando 'git config --global user.name "seu nome de usuário aqui" (o nome que aparece na página do github, nessa etapa o git pode pedir para você autorizar na página, utilizando a sua senha de acesso);
+1) Configurar seu nome de usuário através do comando 'git config --global user.name "seu nome de usuário" (o nome que aparece na página do github, nessa etapa o git pode pedir para você autorizar na página, utilizando a sua senha de acesso);
 3) Comando 'git remote remove origin';
 4) Comando 'git add .';
 5) Criar uma token de acesso pessoal clicando no seu perfil>settings>Developer settings>Personal access tokens>Tokens>Generate new token (dar todos os acessos, gerar e copiar);
 6) Comando 'git remote add origin https://COLAR A TOKEN AQUI@link https copiado do seu repositório .git'
-7) Comando 'git commit -m "Versão atual do projeto";
+7) Comando 'git commit -m "Mensagem do commit";
 8) Comando 'git push --set-upstream origin main'
 -------------------------------------
 
@@ -20,10 +20,10 @@ Utilizando o GitBash
 2) Entrar em uma Branch existente = 'git checkout nome_da_branch';
 3) Criar e entrar na Branch = 'git checkout -b nome_da_branch';
 4) Listar Branches = 'git branch';
-5) Deletar Branch = 'git branch -d nome_da_branch';
+5) Deletar Branch = 'git branch -D nome_da_branch';
 6) Renomear Branch = 'git branch -m nome_atual novo_nome';
 7) Acessar histórico da Branch = 'git log nome_da_branch';
 8) Comando 'git add .';
-9) Comando 'git commit -m "Versão atual do projeto";
-10) Comando 'git push –u origin nome_da_branch'
+9) Comando 'git commit -m "Mensagem do commit";
+10) Comando 'git push --set-upstream origin nome_da_branch'
 -------------------------------------
