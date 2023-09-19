@@ -8,22 +8,5 @@ body {
     background-color: white;
 }
 
-header {
-    background-color: black;
-    height: 8vh;
-}
-
-.container {
-    display: flex;
-    justify-content: center; 
-}
-
-input {
-    margin-top: 3%;
-}
-
-p {
-    color: black;
-}
 
 /* id=# class=. */
