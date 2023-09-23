@@ -73,26 +73,23 @@ function bhaskara() {
 bhaskara();
 
 //8
-var pontuacao = [10, 20, 20, 8, 25];
-var maxPontuacao = Math.max(...pontuacao);
-var minPontuacao = Math.min(...pontuacao);
-
+var pontuacao = [7, 9, 11];
 function basquete(ponto) {
-    if (ponto > maxPontuacao) {
-        alert("Novo Record: " + ponto);
-    }
-    else {
-        alert("Record: " + maxPontuacao);
-    }
+    var maiorPontuacao = Math.max(...pontuacao);
+    var menorPontuacao = Math.min(...pontuacao);
 
-    if (ponto < minPontuacao) {
-        alert("Menor pontuação: " + ponto);
-    }
-    else {
-        alert("Menor pontuação: " + minPontuacao);
+    if (ponto > maiorPontuacao) {
+        alert(`Novo Record: ${ponto}`);
+        pontuacao.push(ponto);
+    } else if (ponto < menorPontuacao) {
+        alert(`Nova Baixa: ${ponto}`);
+        pontuacao.push(ponto);
+    } else {
+        alert(`Record: ${maiorPontuacao}`);
+        alert(`Menor Pontuação: ${menorPontuacao}`);
     }
 }
-basquete(30);
+basquete(20);
 basquete(5);
 
 //9
