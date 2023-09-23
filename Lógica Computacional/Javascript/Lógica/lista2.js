@@ -73,3 +73,23 @@ function bhaskara() {
 bhaskara();
 
 //8
+var pontuacao = [10, 20, 20, 8, 25]
+function basquete(ponto){
+    if (ponto > Math.max(...pontuacao)){
+        alert("Novo Record: "+ponto);
+    }
+    else {
+        alert("Record: "+ponto);
+    }
+
+    if (ponto < Math.min(...pontuacao)){
+        alert("Menor pontuação: "+ponto);
+    }
+    else {
+        alert("Menor pontuação: "+ponto);
+    } 
+}
+basquete(30);
+basquete(5);
+
+
