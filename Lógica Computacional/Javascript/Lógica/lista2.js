@@ -73,23 +73,54 @@ function bhaskara() {
 bhaskara();
 
 //8
-var pontuacao = [10, 20, 20, 8, 25]
-function basquete(ponto){
-    if (ponto > Math.max(...pontuacao)){
-        alert("Novo Record: "+ponto);
+var pontuacao = [10, 20, 20, 8, 25];
+var maxPontuacao = Math.max(...pontuacao);
+var minPontuacao = Math.min(...pontuacao);
+
+function basquete(ponto) {
+    if (ponto > maxPontuacao) {
+        alert("Novo Record: " + ponto);
     }
     else {
-        alert("Record: "+ponto);
+        alert("Record: " + maxPontuacao);
     }
 
-    if (ponto < Math.min(...pontuacao)){
-        alert("Menor pontuação: "+ponto);
+    if (ponto < minPontuacao) {
+        alert("Menor pontuação: " + ponto);
     }
     else {
-        alert("Menor pontuação: "+ponto);
-    } 
+        alert("Menor pontuação: " + minPontuacao);
+    }
 }
 basquete(30);
 basquete(5);
 
+//9
+function escola() {
+    var nota = parseInt(prompt("Digite a nota do aluno: "));
+    var v = 0;
 
+    if (nota < 38) {
+        alert("Aluno reprovado!");
+    } else {
+        for (var i = nota; i <= nota + 5; i++) {
+            if (i % 5 === 0) {
+                v = i;
+                break;
+            }
+        }
+        if (v - nota < 3) {
+            alert("Aluno aprovado, nota: " + v);
+        } else {
+            alert("Aluno aprovado, nota: " + nota);
+        }
+    }
+}
+escola();
+
+//10
+function parametro(numero) {
+    alert(numero % 3 === 0);
+}
+parametro(6);
+parametro(2);
