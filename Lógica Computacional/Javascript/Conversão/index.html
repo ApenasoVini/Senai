@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Temperatura</title>
-
 </head>
 
 <body>
@@ -22,15 +21,15 @@
     </nav>
     <section>
         <input id="number" type="number" placeholder="Digite a temperatura">
-        <select name="type_input">
+        <select>
             <option id="C" value="Celsius">°C</option>
             <option id="F" value="Fahrenheit">°F</option>
-            <option id="" value="Kelvin">K</option>
+            <option id="K" value="Kelvin">K</option>
         </select>
         <input class="radio" type="radio">Celsius</input><br>
         <input class="radio" type="radio">Fahrenheit</input><br>
         <input class="radio" type="radio">Kelvin</input><br>
-        <span id="res"></span>
+        <input id="res" type="text" disabled placeholder="Resultado">
     </section>
     <footer>
         <p>&copy; 2023 Calculadora de Temperatura. Todos os direitos reservados.</p>
