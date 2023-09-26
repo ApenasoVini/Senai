@@ -12,7 +12,7 @@ function triangulos(lado1, lado2, lado3) {
     if (lado1 === lado2 && lado2 === lado3) {
         alert("O triângulo é equilátero");
     }
-    else if (lado1 === lado2 && lado2 !== lado3 || lado2 === lado3 && lado3 !== lado1) {
+    else if (lado1 === lado2 && lado2 !== lado3 || lado2 === lado3 && lado3 !== lado1 || lado1 === lado3 && lado3 !== lado2) {
         alert("O triângulo é isósceles");
     }
     else if (lado1 !== lado2 && lado2 !== lado3) {
@@ -20,7 +20,9 @@ function triangulos(lado1, lado2, lado3) {
     }
 }
 triangulos(1, 1, 1);
-triangulos(2, 2, 1);
+triangulos(1, 1, 2);
+triangulos(1, 2, 1);
+triangulos(2, 1, 1);
 triangulos(1, 2, 3);
 
 //3
@@ -107,9 +109,9 @@ function escola() {
             }
         }
         if (v - nota < 3) {
-            alert("Aluno aprovado, nota: " + v);
+            alert(`Aluno aprovado, nota: ${v}`);
         } else {
-            alert("Aluno aprovado, nota: " + nota);
+            alert(`Aluno aprovado, nota: ${nota}`);
         }
     }
 }
