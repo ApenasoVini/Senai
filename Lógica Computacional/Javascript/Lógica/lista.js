@@ -1,11 +1,7 @@
 //Par ou Ímpar
 function par() {
   var num = prompt("Escolha um número: ");
-  if (num % 2 === 0) {
-    alert("par");
-  } else {
-    alert("ímpar");
-  }
+  return num % 2 === 0 ? alert("Par") : alert("Ímpar")
 }
 par();
 
