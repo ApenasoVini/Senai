@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -15,22 +15,16 @@ header {
 nav {
     background-color: gray;
     text-align: center;
-    padding: 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
+    padding: 5px;
 }
 
 li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 2%;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
+img {
+    width: 4%;
 }
 
 section {
@@ -42,8 +36,8 @@ section {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.number {
-    width: 160%;
+#number {
+    width: 600px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -51,7 +45,7 @@ section {
 }
 
 select {
-    width: 100%;
+    width: 600px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -63,8 +57,8 @@ select {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: dimgrey;
+    color: white;
     text-align: center;
     padding: 10px;
 }
