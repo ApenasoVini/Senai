@@ -18,5 +18,6 @@ function pedra_papel_tesoura() {
     } else {
         alert('Você ganhou!');
     }
+    console.log(`IA: ${ia} x Você: ${user}`)
 }
 pedra_papel_tesoura();

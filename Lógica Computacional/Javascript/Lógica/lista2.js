@@ -108,11 +108,7 @@ function escola() {
                 break;
             }
         }
-        if (v - nota < 3) {
-            alert(`Aluno aprovado, nota: ${v}`);
-        } else {
-            alert(`Aluno aprovado, nota: ${nota}`);
-        }
+        return v - nota < 3 ? alert(`Aluno aprovado, nota: ${v}`) : alert(`Aluno aprovado, nota: ${nota}`)
     }
 }
 escola();
