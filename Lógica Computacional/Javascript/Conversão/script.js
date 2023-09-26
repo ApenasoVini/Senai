@@ -23,5 +23,5 @@ function converte() {
         resultadoFinal = (temperatura - 273.15) * (9 / 5) + 32;
     }
 
-    document.getElementById("resultado").innerHTML = resultadoFinal;
+    document.getElementById('res').innerHTML = resultadoFinal;
 }
