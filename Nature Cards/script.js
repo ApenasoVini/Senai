@@ -1,6 +1,6 @@
     let placa, modelo, marca, ano
     function campos() {
-        placa = document.getElementById("placa");
+        elemento = document.getElementById("");
         if (placa.length == 8) {
             return true
         }
