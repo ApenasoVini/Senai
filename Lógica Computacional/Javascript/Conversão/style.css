@@ -31,9 +31,8 @@ section {
     margin: 20px auto;
     padding: 20px;
     max-width: 600px;
-    background-color: white;
     border: 1px solid gray;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 #number {
@@ -53,6 +52,10 @@ select {
     text-align: justify;
 }
 
+.radio {
+    margin-right: 5px;
+}
+
 button {
     border: 0;
     width: 5vw;
@@ -63,12 +66,7 @@ button {
 }
 
 button:hover {
-    background-color: lightgray;
     cursor: pointer;
-}
-
-.radio {
-    margin-right: 5px;
 }
 
 #res {
