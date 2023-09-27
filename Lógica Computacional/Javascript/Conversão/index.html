@@ -21,15 +21,16 @@
     </nav>
     <section>
         <input id="number" type="number" placeholder="Digite a temperatura">
-        <select>
-            <option id="C" value="Celsius">°C</option>
-            <option id="F" value="Fahrenheit">°F</option>
-            <option id="K" value="Kelvin">K</option>
+        <select id="tipo">
+            <option value="Celsius">°C</option>
+            <option value="Fahrenheit">°F</option>
+            <option value="Kelvin">K</option>
         </select>
-        <input class="radio" type="radio">Celsius</input><br>
-        <input class="radio" type="radio">Fahrenheit</input><br>
-        <input class="radio" type="radio">Kelvin</input><br>
+        <input class="radio" name="temp" id="c" type="radio">Celsius</input><br>
+        <input class="radio" name="temp" id="f" type="radio">Fahrenheit</input><br>
+        <input class="radio" name="temp" id="k" type="radio">Kelvin</input><br>
         <input id="res" type="text" disabled placeholder="Resultado">
+        <button type="button" onclick="converte()">Calcular</button>
     </section>
     <footer>
         <p>&copy; 2023 Calculadora de Temperatura. Todos os direitos reservados.</p>

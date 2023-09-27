@@ -31,15 +31,15 @@ section {
     margin: 20px auto;
     padding: 20px;
     max-width: 600px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: white;
+    border: 1px solid gray;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 #number {
     width: 30vw;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid gray;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -47,14 +47,36 @@ section {
 select {
     width: 10vw;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid gray;
     border-radius: 5px;
     margin-bottom: 10px;
     text-align: justify;
 }
 
+button {
+    border: 0;
+    width: 5vw;
+    height: 7vh;
+    background-color: lightgray;
+    margin-left: 1%;
+    border-radius: 10%;
+}
+
+button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
 .radio {
     margin-right: 5px;
+}
+
+#res {
+    text-align: justify;
+    width: 10vw;
+    height: 2.2vw;
+    margin-top: 3%;
+    padding: 5px;
 }
 
 footer {
@@ -62,12 +84,4 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-}
-
-#res {
-    text-align: justify;
-    width: 10vw;
-    height: 2vw;
-    margin-top: 3%;
-    padding: 5px;
 }
