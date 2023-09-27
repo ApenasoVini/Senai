@@ -1,0 +1,16 @@
+{
+    "elementos": [
+        {
+            "nome": "API-1234",
+            "descrição": "Ferrari",
+            "defesa": "ROMA.",
+            "ataque": "2019",
+            "vantagem contra": "xxx",
+            "desvantagem contra": "yyy",
+            "icon": "img",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        }
+    ]
+}
