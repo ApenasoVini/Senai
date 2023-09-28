@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +8,50 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <title>Nature Cards</title>
 </head>
+
 <body>
     <header>
-        <h1>Cabeçalho</h1>
+        <h1>Nature Cards</h1>
     </header>
 
     <nav>
-        <a href="https://www.instagram.com/sf.vini/">Instagram</a>
-        <a href="https://github.com/ApenasoVini">GitHub</a>
+        <a href="https://www.instagram.com/sf.vini/"><img src="./img/IG.svg" alt="instagram"></a>
+        <a href="https://github.com/ApenasoVini"><img src="./img/GH.svg" alt="github"></a>
     </nav>
 
     <section>
-             <h2>Guia de Pesquisa</h2>
-     <div class="pesquisa">
-              <div class="pesquisa-container">
-                <select id="opcoes-pesquisa">
-                    <option value="opcao1">Opção 1</option>
-                    <option value="opcao2">Opção 2</option>
-                    <option value="opcao3">Opção 3</option>
-                </select>
-                <button id="btn-pesquisar">Pesquisar</button>
-            </div>
+        <h2>Guia de Pesquisa</h2>
+        <div class="pesquisa-container">
+            <select id="opcoes-pesquisa">
+                <option value="Terra">Terra</option>
+                <option value="Água">Água</option>
+                <option value="Ar">Ar</option>
+                <option value="Fogo">Fogo</option>
+                <option value="Raio">Raio</option>
+                <option value="Gelo">Gelo</option>
+                <option value="Veneno">Veneno</option>
+                <option value="Metal">Metal</option>
+                <option value="Cristal">Cristal</option>
+                <option value="Lava">Lava</option>
+            </select>
+            <button id="btn-pesquisar">Pesquisar</button>
         </div>
-        
+
         <div class="carta">
-            <h2>Modelo de Carta para RPG</h2>
+            <h2 id="nome">Nome do Destinatário</h2>
             <p>Nome do Remetente: [Seu Nome]</p>
             <p>Endereço do Remetente: [Seu Endereço]</p>
             <p>Data: [Data]</p>
-            <p>Nome do Destinatário: [Nome do Destinatário]</p>
             <p>Endereço do Destinatário: [Endereço do Destinatário]</p>
             <p>Prezado [Nome do Destinatário],</p>
             <p>Conteúdo da carta...</p>
-            <p>Atenciosamente,</p>
-            <p>[Seu Nome]</p>
+            <p>Atenciosamente, [Seu Nome]</p>
         </div>
     </section>
 
     <footer>
-        <p>Rodapé</p>
+        <p>&copy; 2023 Nature Cards. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>

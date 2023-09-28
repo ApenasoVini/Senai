@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -36,13 +37,14 @@ nav a {
 section {
     margin: 20px;
     padding: 20px;
+    background-color: #fff;
     border: 1px solid #ddd;
 }
 
 .carta {
-    background-color: #fff;
     padding: 20px;
     border: 1px solid #ccc;
+    background-color: #fff;
 }
 
 .pesquisa-container {
@@ -50,12 +52,6 @@ section {
     justify-content: center;
     align-items: center;
     gap: 10px;
-}
-
-#pesquisa {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
 #opcoes-pesquisa {
