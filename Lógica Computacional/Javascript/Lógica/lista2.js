@@ -77,18 +77,18 @@ bhaskara();
 //8
 var pontuacao = [7, 9, 11];
 function basquete(ponto) {
-    var maiorPontuacao = Math.max(...pontuacao);
-    var menorPontuacao = Math.min(...pontuacao);
+    var maior = Math.max(...pontuacao);
+    var menor = Math.min(...pontuacao);
 
-    if (ponto > maiorPontuacao) {
+    if (ponto > maior) {
         alert(`Novo Record: ${ponto}`);
         pontuacao.push(ponto);
-    } else if (ponto < menorPontuacao) {
+    } else if (ponto < menor) {
         alert(`Nova Baixa: ${ponto}`);
         pontuacao.push(ponto);
     } else {
-        alert(`Record: ${maiorPontuacao}`);
-        alert(`Menor Pontuação: ${menorPontuacao}`);
+        alert(`Record: ${maior}`);
+        alert(`Menor Pontuação: ${menor}`);
     }
 }
 basquete(20);
