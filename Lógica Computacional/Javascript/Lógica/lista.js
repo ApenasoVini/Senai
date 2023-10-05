@@ -1,7 +1,7 @@
 //Par ou Ímpar
 function par() {
   var num = prompt("Escolha um número: ");
-  return num % 2 === 0 ? alert("Par") : alert("Ímpar")
+  return num % 2 === 0 ? console.log("Par") : console.log("Ímpar")
 }
 par();
 
@@ -9,13 +9,13 @@ par();
 function fatorial() {
   var num2 = prompt("Escolha um número: ");
   if (num2 == 0) {
-    alert(1)
+    console.log(1)
   }
   else {
     for (var i = num2 - 1; i >= 1; i--) {
       num2 *= i;
     }
-    alert(num2);
+    console.log(num2);
   }
 }
 fatorial();
@@ -30,7 +30,7 @@ function primos() {
       div++;
     }
   }
-  return div == 2 ? alert(num3 + " é primo") : alert(num3 + " não é primo");
+  return div == 2 ? console.log(num3 + " é primo") : console.log(num3 + " não é primo");
 }
 primos()
 
@@ -40,15 +40,15 @@ function fibonacci() {
   var num4 = prompt("Digite a quantidade de números na sequência: ");
 
   if (num4 == 1) {
-    alert("Sequência: " + seq.splice(1));
+    console.log("Sequência: " + seq.splice(1));
   } else if (num4 == 2) {
-    alert("Sequência: " + seq);
+    console.log("Sequência: " + seq);
   } else {
 
     for (var i = 2; i < num4; i++) {
       seq.push(seq[i - 1] + seq[i - 2]);
     }
-    alert("Sequência: " + seq);
+    console.log("Sequência: " + seq);
   }
 }
 fibonacci();
@@ -56,7 +56,7 @@ fibonacci();
 //String invertida
 function invertString() {
   var str = prompt("Esreva algo: ")
-  alert(str.split("").reverse().join(""));
+  console.log(str.split("").reverse().join(""));
 }
 invertString()
 
@@ -71,7 +71,7 @@ function arrayPar() {
       numspares.push(numArray[i]);
     }
   }
-  alert(numspares);
+  console.log(numspares);
 }
 arrayPar();
 
@@ -82,10 +82,10 @@ function palindromo() {
   var palavraInv = palavra.split("").reverse().join("");
 
   if (palavra === palavraInv) {
-    alert(palavraInicial + " é um palíndromo")
+    console.log(palavraInicial + " é um palíndromo")
   }
   else {
-    alert(palavraInicial + " não é um palíndromo")
+    console.log(palavraInicial + " não é um palíndromo")
   }
 }
 palindromo()
@@ -101,7 +101,7 @@ function vogais() {
       vogal.push(letras[i]);
     }
   }
-  alert(vogal);
+  console.log(vogal);
 }
 vogais();
 
@@ -116,7 +116,7 @@ function SomaPares() {
       soma += i;
     }
   }
-  alert(soma);
+  console.log(soma);
 }
 SomaPares();
 
@@ -129,6 +129,6 @@ function multiplicacao() {
   for (var i = 0; i < vezes; i++) {
     resultado += numero;
   }
-  alert(resultado);
+  console.log(resultado);
 }
 multiplicacao();

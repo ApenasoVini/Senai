@@ -1,22 +1,22 @@
 //1
 function numeros(num1, num2) {
-    alert(num1 + num2);
-    alert(num1 - num2);
-    alert(num1 * num2);
-    alert(num1 / num2);
+    console.log(num1 + num2);
+    console.log(num1 - num2);
+    console.log(num1 * num2);
+    console.log(num1 / num2);
 }
 numeros(50, 20);
 
 //2
 function triangulos(lado1, lado2, lado3) {
     if (lado1 === lado2 && lado2 === lado3) {
-        alert("O triângulo é equilátero");
+        console.log("O triângulo é equilátero");
     }
     else if (lado1 === lado2 && lado2 !== lado3 || lado2 === lado3 && lado3 !== lado1 || lado1 === lado3 && lado3 !== lado2) {
-        alert("O triângulo é isósceles");
+        console.log("O triângulo é isósceles");
     }
     else if (lado1 !== lado2 && lado2 !== lado3) {
-        alert("O triângulo é escaleno");
+        console.log("O triângulo é escaleno");
     }
 }
 triangulos(1, 1, 1);
@@ -27,31 +27,31 @@ triangulos(1, 2, 3);
 
 //3
 function numeros2(base, expoente) {
-    alert(base ** expoente)
+    console.log(base ** expoente)
 }
 numeros2(2, 3);
 
 //4 
 function numeros3(dividendo, divisor) {
-    alert(dividendo / divisor);
-    alert(dividendo % divisor);
+    console.log(dividendo / divisor);
+    console.log(dividendo % divisor);
 }
 numeros3(-13, 5);
 
 //5
 function aproximar(num) {
-    alert(num.toFixed(2))
+    console.log(num.toFixed(2))
 }
 aproximar(0.30000000000000004);
 
 //6
 function imposto(ci, jur, temp) {
-    alert(ci * jur * temp);
+    console.log(ci * jur * temp);
 }
 imposto(500, 0.3, 2)
 
 function imposto2(ci, jur, temp) {
-    alert(ci * (1 + jur) ** temp);
+    console.log(ci * (1 + jur) ** temp);
 }
 imposto2(500, 0.3, 2)
 
@@ -64,12 +64,12 @@ function bhaskara() {
     let delta = b ** 2 - 4 * a * c
 
     if (delta < 0) {
-        alert("Delta é negativo (não existem raízes reais)");
+        console.log("Delta é negativo (não existem raízes reais)");
     }
     else {
         let x1 = (-b + Math.sqrt(delta)) / (2 * a);
-        let x2 = (-b + Math.sqrt(delta)) / (2 * a);
-        alert("Seus resultados são: " + x1 + " e " + x2);
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        console.log("Seus resultados são: " + x1 + " e " + x2);
     }
 }
 bhaskara();
@@ -81,14 +81,14 @@ function basquete(ponto) {
     var menor = Math.min(...pontuacao);
 
     if (ponto > maior) {
-        alert(`Novo Record: ${ponto}`);
+        console.log(`Novo Record: ${ponto}`);
         pontuacao.push(ponto);
     } else if (ponto < menor) {
-        alert(`Nova Baixa: ${ponto}`);
+        console.log(`Nova Baixa: ${ponto}`);
         pontuacao.push(ponto);
     } else {
-        alert(`Record: ${maior}`);
-        alert(`Menor Pontuação: ${menor}`);
+        console.log(`Record: ${maior}`);
+        console.log(`Menor Pontuação: ${menor}`);
     }
 }
 basquete(20);
@@ -100,7 +100,7 @@ function escola() {
     var v = 0;
 
     if (nota < 38) {
-        alert("Aluno reprovado!");
+        console.log("Aluno reprovado!");
     } else {
         for (var i = nota; i <= nota + 5; i++) {
             if (i % 5 === 0) {
@@ -108,14 +108,14 @@ function escola() {
                 break;
             }
         }
-        return v - nota < 3 ? alert(`Aluno aprovado, nota: ${v}`) : alert(`Aluno aprovado, nota: ${nota}`)
+        return v - nota < 3 ? console.log(`Aluno aprovado, nota: ${v}`) : console.log(`Aluno aprovado, nota: ${nota}`)
     }
 }
 escola();
 
 //10
 function parametro(numero) {
-    alert(numero % 3 === 0);
+    console.log(numero % 3 === 0);
 }
 parametro(6);
 parametro(2);
