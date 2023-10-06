@@ -62,7 +62,6 @@ function bhaskara() {
     let b = prompt("Digite o valor de B:\n");
     let c = prompt("Digite o valor de C:\n");
     let delta = b ** 2 - 4 * a * c
-
     if (delta < 0) {
         console.log("Delta é negativo (não existem raízes reais)");
     }
@@ -79,7 +78,6 @@ var pontuacao = [7, 9, 11];
 function basquete(ponto) {
     var maior = Math.max(...pontuacao);
     var menor = Math.min(...pontuacao);
-
     if (ponto > maior) {
         console.log(`Novo Record: ${ponto}`);
         pontuacao.push(ponto);
@@ -98,7 +96,6 @@ basquete(5);
 function escola() {
     var nota = parseInt(prompt("Digite a nota do aluno: "));
     var v = 0;
-
     if (nota < 38) {
         console.log("Aluno reprovado!");
     } else {

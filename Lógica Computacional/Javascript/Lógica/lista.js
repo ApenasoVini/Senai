@@ -9,7 +9,7 @@ par();
 function fatorial() {
   var num2 = prompt("Escolha um número: ");
   if (num2 == 0) {
-    console.log(1)
+    console.log(`1`)
   }
   else {
     for (var i = num2 - 1; i >= 1; i--) {
@@ -44,7 +44,6 @@ function fibonacci() {
   } else if (num4 == 2) {
     console.log("Sequência: " + seq);
   } else {
-
     for (var i = 2; i < num4; i++) {
       seq.push(seq[i - 1] + seq[i - 2]);
     }
@@ -62,16 +61,17 @@ invertString()
 
 //Números pares em array.
 function arrayPar() {
-  var nums = prompt("Digite os números: ");
-  var numArray = nums.split("");
-  let numspares = [];
+  var nums = prompt("Digite os números separados por vírgula: ");
+  var numArray = nums.split(",");
+  let numPares = [];
 
   for (var i = 0; i < numArray.length; i++) {
-    if (numArray[i] % 2 == 0) {
-      numspares.push(numArray[i]);
+    var num = parseInt(numArray[i]);
+    if (num % 2 === 0) {
+      numPares.push(num);
     }
   }
-  console.log(numspares);
+  console.log("Números pares:", numPares);
 }
 arrayPar();
 
@@ -110,7 +110,6 @@ function SomaPares() {
   var inicio = parseInt(prompt("Digite o primeiro número: "));
   var fim = parseInt(prompt("Digite o último número: "));
   var soma = 0;
-
   for (var i = inicio; i <= fim; i++) {
     if (i % 2 == 0) {
       soma += i;
@@ -125,7 +124,6 @@ function multiplicacao() {
   var numero = parseInt(prompt("Digite o número: "));
   var vezes = parseInt(prompt("Digite a quantidade de vezes: "));
   var resultado = 0;
-
   for (var i = 0; i < vezes; i++) {
     resultado += numero;
   }
