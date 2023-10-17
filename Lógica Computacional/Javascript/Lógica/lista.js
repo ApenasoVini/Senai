@@ -24,7 +24,6 @@ fatorial();
 function primos() {
   var num3 = prompt("Digite um número: ");
   var div = 0
-
   for (var i = 0; i <= num3; i++) {
     if (num3 % i == 0) {
       div++;
@@ -38,7 +37,6 @@ primos()
 function fibonacci() {
   const seq = [1, 1];
   var num4 = prompt("Digite a quantidade de números na sequência: ");
-
   if (num4 == 1) {
     console.log("Sequência: " + seq.splice(1));
   } else if (num4 == 2) {
@@ -64,7 +62,6 @@ function arrayPar() {
   var nums = prompt("Digite os números separados por vírgula: ");
   var numArray = nums.split(",");
   let numPares = [];
-
   for (var i = 0; i < numArray.length; i++) {
     var num = parseInt(numArray[i]);
     if (num % 2 === 0) {
@@ -80,7 +77,6 @@ function palindromo() {
   var palavraInicial = prompt("Esreva algo: ")
   var palavra = palavraInicial.toLowerCase()
   var palavraInv = palavra.split("").reverse().join("");
-
   if (palavra === palavraInv) {
     console.log(palavraInicial + " é um palíndromo")
   }
@@ -95,7 +91,6 @@ function vogais() {
   var palavra = prompt("Digite uma palavra: ");
   var letras = palavra.split("");
   let vogal = [];
-
   for (var i = 0; i < letras.length; i++) {
     if (letras[i] === "a" || letras[i] === "e" || letras[i] === "i" || letras[i] === "o" || letras[i] === "u") {
       vogal.push(letras[i]);
