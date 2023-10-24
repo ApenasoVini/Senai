@@ -1,0 +1,25 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#div {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#div #input {
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+    height: 10vh;
+    width: 30vw;
+    font-size: 2.5rem;
+    border: 5px solid #646464;
+    border-radius: 10px;
+}
+
