@@ -11,7 +11,7 @@ header {
     text-align: center;
 }
 
-#btns {
+.btns {
     height: 60vh;
     display: flex;
     justify-content: space-evenly;
@@ -23,12 +23,10 @@ input {
     height: 30vh;
 }
 
-#inputB::after {
-    content: "Fundo";
+input::after {
     position: absolute;
-    display: none;
+    display: block;
     top: 37%;
-    left: 27.5%;
     background-color: #333;
     color: #fff;
     width: 4vw;
@@ -39,31 +37,17 @@ input {
     border-radius: 5px;
 }
 
-#inputB:hover::after {
-    display: block;
+#inputB::after {
+    content: "Fundo";
+    left: 27.5%;
 }
 
 #inputC::after {
     content: "Texto";
-    position: absolute;
-    display: none;
-    top: 37%;
     left: 67.5%;
-    background-color: #333;
-    color: #fff;
-    width: 4vw;
-    height: 3vh;
-    text-align: center;
-    font-size: larger;
-    padding: 5px;
-    border-radius: 5px;
 }
 
-#inputC:hover::after {
-    display: block;
-}
-
-#on {
+.on {
     display: flex;
     justify-content: center;
 }
