@@ -1,29 +1,59 @@
 Utilizando o GitBash
 
 -------Clonando Repositório----------
-1) Na página do seu repositório, clicar em '< >Code' e copiar o endereço https do seu repositório;
-2) utilizar comando 'git clone endereço https copiado do seu repositório.git';
--------------------------------------
+git clone URL_DO_REPOSITÓRIO.git
+
 
 ------Commit e Push------------------
-1) Configurar seu nome de usuário através do comando 'git config --global user.name "seu nome de usuário" (o nome que aparece na página do github, nessa etapa o git pode pedir para você autorizar na página, utilizando a sua senha de acesso);
-3) Comando 'git remote remove origin';
-4) Comando 'git add .';
-5) Criar uma token de acesso pessoal clicando no seu perfil>settings>Developer settings>Personal access tokens>Tokens>Generate new token (dar todos os acessos, gerar e copiar);
-6) Comando 'git remote add origin https://COLAR A TOKEN AQUI@link https copiado do seu repositório .git'
-7) Comando 'git commit -m "Mensagem do commit";
-8) Comando 'git push --set-upstream origin main'
--------------------------------------
+# Configurar nome de usuário
+git config --global user.name "SEU_NOME_DE_USUÁRIO"
+
+# Configurar endereço de e-mail
+git config --global user.email "SEU_ENDEREÇO_DE_EMAIL"
+
+# Remover a origem existente
+git remote remove origin
+
+# Adicionar todas as alterações
+git add .
+
+# Criar um commit com mensagem descritiva
+git commit -m "Mensagem do commit"
+
+# Adicionar a origem com seu token de acesso pessoal
+git remote add origin https://SEU_TOKEN_AQUI@URL_DO_REPOSITÓRIO.git
+
+# Enviar alterações para a branch principal (geralmente 'main')
+git push --set-upstream origin main
+
 
 ------Branch------------------
-1) Criar Branch = 'git branch nome_da_branch';
-2) Entrar em uma Branch existente = 'git checkout nome_da_branch';
-3) Criar e entrar na Branch = 'git checkout -b nome_da_branch';
-4) Listar Branches = 'git branch';
-5) Deletar Branch = 'git branch -D nome_da_branch';
-6) Renomear Branch = 'git branch -m nome_atual novo_nome';
-7) Acessar histórico da Branch = 'git log nome_da_branch';
-8) Comando 'git add .';
-9) Comando 'git commit -m "Mensagem do commit";
-10) Comando 'git push --set-upstream origin nome_da_branch'
--------------------------------------
+# Criar uma nova branch
+git branch nome_da_branch
+
+# Entrar em uma branch existente
+git checkout nome_da_branch
+
+# Criar e entrar em uma nova branch
+git checkout -b nome_da_branch
+
+# Listar todas as branches locais
+git branch
+
+# Deletar uma branch
+git branch -D nome_da_branch
+
+# Renomear uma branch
+git branch -m nome_atual novo_nome
+
+# Acessar o histórico da branch
+git log nome_da_branch
+
+# Adicionar alterações antes do commit
+git add .
+
+# Criar um commit com mensagem
+git commit -m "Mensagem do commit"
+
+# Enviar uma nova branch para o repositório remoto
+git push --set-upstream origin nome_da_branch
