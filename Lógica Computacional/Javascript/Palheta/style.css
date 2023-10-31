@@ -36,14 +36,14 @@ button {
     background-color: transparent;
     color: black;
     border-radius: 10px;
-    height: 5vh;
-    width: 7vw;
+    height: 7vh;
+    width: 10vw;
     transition: 0.8s;
 }
 
 button:hover {
-    height: 6vh;
-    width: 8vw;
+    height: 8vh;
+    width: 12vw;
     transition: 0.8s;
     cursor: pointer;
 }
