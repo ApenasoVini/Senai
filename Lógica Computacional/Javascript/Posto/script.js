@@ -6,7 +6,7 @@ function calcular() {
     var preco = 0;
 
     if (litros > litrosBomba || litros <= 0) {
-        alert(`A bomba não possui essa quantidade. Litros: ${litrosBomba}`);
+        document.getElementById("bomba").value = `Erro! ${litrosBomba}L`
         return;
     }
 
@@ -21,8 +21,8 @@ function calcular() {
     }
 
     litrosBomba -= litros;
-    alert(`Litros na bomba: ${litrosBomba}`);
-    alert(`Valor: R$${preco.toFixed(2)}`);
+    document.getElementById("preco").value = `Valor: R$${preco.toFixed(2)}`
+    document.getElementById("bomba").value = `Litros: ${litrosBomba}L`
 }
 
 
