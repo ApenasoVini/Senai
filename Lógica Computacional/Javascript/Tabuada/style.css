@@ -11,5 +11,10 @@
     align-items: center;
     height: 40vh;
     gap: 10px;
+}
 
+.res {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
