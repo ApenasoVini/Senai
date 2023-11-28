@@ -1,14 +1,16 @@
 function cores() {
     var one = parseInt(document.getElementById("inputNumberOne").value);
     var two = parseInt(document.getElementById("inputNumberTwo").value);
-    var divRes = document.getElementById("res");
     var resposta = one * two;
+    var valorFinal = document.getElementById("valorFinal")
+    valorFinal.value = resposta;
+    var divRes = document.getElementById("res");
     let cores = [4, 6, 11, 7, 9];
     let validos = []
 
     for (i = 0; i < cores.length; i++) {
         if (resposta % cores[i] === 0) {
-            validos.push([i])
+            validos.push(cores[i])
         }
     }
 
@@ -45,4 +47,5 @@ function cores() {
             divRes.appendChild("purple");
         }
     }
+
 }
