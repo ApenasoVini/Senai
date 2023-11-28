@@ -11,7 +11,7 @@
 
 <body>
 
-    <section class="tabuadas">
+    <div class="tabuadas">
         <div style="border: 3px solid red;" id="4">
             <p>4</p>
             <p>8</p>
@@ -76,19 +76,21 @@
             <p>81</p>
             <p>90</p>
         </div>
-    </section>
+    </div>
 
-    <input type="number" min="1" max="10" id="inputNumberOne" placeholder="Digite o primeiro número">
-    <input type="number" min="1" max="10" id="inputNumberTwo" placeholder="Digite o segundo número">
-    <button onclick="cores()">Verificar</button>
+    <div class="infos">
+        <input type="number" min="1" max="10" id="inputNumberOne" placeholder="Digite o primeiro número">
+        <input type="number" min="1" max="10" id="inputNumberTwo" placeholder="Digite o segundo número">
+        <button onclick="cores()">Verificar</button>
+        <input id="valorFinal" disabled type="number" placeholder="Resultado">
+    </div>
 
     <div class="res">
-        <input id="valorFinal" disabled type="number" placeholder="Resultado">
-        <div style="width: 5vw; height: 5vh; background-color: black;" id="cx1"></div>
-        <div style="width: 5vw; height: 5vh; background-color: black;" id="cx2"></div>
-        <div style="width: 5vw; height: 5vh; background-color: black;" id="cx3"></div>
-        <div style="width: 5vw; height: 5vh; background-color: black;" id="cx4"></div>
-        <div style="width: 5vw; height: 5vh; background-color: black;" id="cx5"></div>
+        <div style="width: 5vw; height: 8vh; background-color: black;" id="cx1"></div>
+        <div style="width: 5vw; height: 8vh; background-color: black;" id="cx2"></div>
+        <div style="width: 5vw; height: 8vh; background-color: black;" id="cx3"></div>
+        <div style="width: 5vw; height: 8vh; background-color: black;" id="cx4"></div>
+        <div style="width: 5vw; height: 8vh; background-color: black;" id="cx5"></div>
     </div>
 
 

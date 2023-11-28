@@ -4,17 +4,45 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #fff;
+    font-family: Arial;
+}
+
 .tabuadas {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 40vh;
     gap: 10px;
+    font-size: larger;
+}
+
+.infos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.infos input {
+    width: 15vw;
+    height: 5vh;
+    padding: 5px;
+}
+
+.infos button {
+    width: 5vw;
+    height: 5vh;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .res {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
+    justify-content: center;
 }
