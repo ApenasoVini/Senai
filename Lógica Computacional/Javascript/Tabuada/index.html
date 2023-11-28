@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Tabuada com cores</title>
+</head>
+
+<body>
+
+    <section class="tabuadas">
+        <div style="border: 3px solid red;" id="4">
+            <p>4</p>
+            <p>8</p>
+            <p>12</p>
+            <p>16</p>
+            <p>20</p>
+            <p>24</p>
+            <p>28</p>
+            <p>32</p>
+            <p>36</p>
+            <p>40</p>
+        </div>
+
+        <div style="border: 3px solid green;" id="6">
+            <p>6</p>
+            <p>12</p>
+            <p>18</p>
+            <p>24</p>
+            <p>30</p>
+            <p>36</p>
+            <p>42</p>
+            <p>48</p>
+            <p>54</p>
+            <p>60</p>
+        </div>
+
+        <div style="border: 3px solid yellow;" id="11">
+            <p>11</p>
+            <p>22</p>
+            <p>33</p>
+            <p>44</p>
+            <p>55</p>
+            <p>66</p>
+            <p>77</p>
+            <p>88</p>
+            <p>99</p>
+            <p>110</p>
+        </div>
+
+        <div style="border: 3px solid blue;" id="7">
+            <p>7</p>
+            <p>14</p>
+            <p>21</p>
+            <p>28</p>
+            <p>35</p>
+            <p>42</p>
+            <p>49</p>
+            <p>56</p>
+            <p>63</p>
+            <p>70</p>
+        </div>
+
+        <div style="border: 3px solid purple;" id="9">
+            <p>9</p>
+            <p>18</p>
+            <p>27</p>
+            <p>36</p>
+            <p>45</p>
+            <p>54</p>
+            <p>63</p>
+            <p>72</p>
+            <p>81</p>
+            <p>90</p>
+        </div>
+    </section>
+
+    <input type="number" min="1" max="10" id="inputNumberOne" placeholder="Digite o primeiro número">
+    <input type="number" min="1" max="10" id="inputNumberTwo" placeholder="Digite o primeiro número">
+    <button onclick="cores()" id="btn">Verificar</button>
+
+    <div id="res">
+        <input id="valorFinal" disabled type="number" placeholder="Resultado">
+    </div>
+
+
+</body>
+
+</html>
+
+<script src="script.js"></script>
