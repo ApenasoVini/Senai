@@ -25,7 +25,7 @@ input {
 
 input::after {
     position: absolute;
-    top: 37%;
+    top: 35%;
     background-color: #333;
     color: #fff;
     width: 4vw;
@@ -43,7 +43,7 @@ input::after {
 
 #inputC::after {
     content: "Texto";
-    left: 67.5%;
+    left: 68%;
 }
 
 .button {
