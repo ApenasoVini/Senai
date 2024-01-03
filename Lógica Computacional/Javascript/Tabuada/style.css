@@ -11,19 +11,35 @@ body {
 
 .tabuadas {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+}
+
+.tabuadas .content {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 40vh;
     gap: 10px;
-    font-size: larger;
+    align-items: center;
+}
+
+.tabuadas .content p {
+    font-size: large;
+}
+
+.tabuadas .content .cor {
+    width: 2.5vw;
+    height: 6vh;
+    border-radius: 50%;
 }
 
 .infos {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
+    margin-top: 4%;
     gap: 10px;
 }
 
@@ -34,15 +50,45 @@ body {
 }
 
 .infos button {
-    width: 5vw;
+    width: 8vw;
     height: 5vh;
     padding: 5px;
     cursor: pointer;
 }
 
-.res {
+.resultado {
     display: flex;
     flex-direction: row;
     gap: 10px;
     justify-content: center;
+    align-items: center;
+}
+
+.resultado div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 9vh;
+    border-radius: 50%;
+}
+
+.resultado input {
+    cursor: pointer;
+    width: 4vw;
+    height: 4vh;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 8vh 0 0 0;
+}
+
+.button button {
+    padding: 5px;
+    height: 8vh;
+    width: 10vw;
+    font-size: larger;
+    cursor: pointer;
 }

@@ -1,46 +1,40 @@
-function cores() {
-    var resposta = parseInt(document.getElementById("inputNumberOne").value) * parseInt(document.getElementById("inputNumberTwo").value);
-    var valorFinal = document.getElementById("valorFinal");
-    valorFinal.value = resposta;
-    var cx1 = document.getElementById("cx1");
-    var cx2 = document.getElementById("cx2");
-    var cx3 = document.getElementById("cx3");
-    var cx4 = document.getElementById("cx4");
-    var cx5 = document.getElementById("cx5");
-    cx1.style.backgroundColor = "black";
-    cx2.style.backgroundColor = "black";
-    cx3.style.backgroundColor = "black";
-    cx4.style.backgroundColor = "black";
-    cx5.style.backgroundColor = "black";
-    let cores = [4, 6, 11, 7, 9];
-    let validos = [];
+var numGerado;
+var input = document.getElementById("inputNumero");
+const divisores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    for (i = 0; i < cores.length; i++) {
-        if (resposta % cores[i] === 0) {
-            validos.push(cores[i])
+function gerar() {
+    let num1 = 0, num2 = 0;
+    while (num1 === 0 || num2 === 0) {
+        num1 = Math.floor(Math.random() * divisores.length);
+        num2 = Math.floor(Math.random() * divisores.length);
+    }
+    numGerado = num1 * num2;
+    input.value = numGerado;
+}
+
+function jogo() {
+    let tabuadas = [];
+    for (let i = 0; i < divisores.length; i++) {
+        if (numGerado % divisores[i] === 0) {
+            tabuadas.push(divisores[i]);
         }
     }
-
-    for (x = 0; x < validos.length; x++) {
-        if (validos[x] === 4) {
-            cx1.style.backgroundColor = "red"
-        }
-
-        else if (validos[x] === 6) {
-            cx2.style.backgroundColor = "green"
-        }
-
-        else if (validos[x] === 11) {
-            cx3.style.backgroundColor = "yellow"
-        }
-
-        else if (validos[x] === 7) {
-            cx4.style.backgroundColor = "blue"
-        }
-
-        else {
-            cx5.style.backgroundColor = "purple"
+    let valoresEscolhidos = [];
+    for (let i = 1; i <= 10; i++) {
+        var checkbox = document.getElementById("cx" + i);
+        if (checkbox.checked) {
+            valoresEscolhidos.push(parseInt(checkbox.value));
         }
     }
-
+    if (tabuadas.toString() === valoresEscolhidos.toString()) {
+        alert("Você acertou!")
+    }
+    else {
+        alert("Você errou!");
+    }
+    for (let i = 1; i <= 10; i++) {
+        var checkbox = document.getElementById("cx" + i);
+        checkbox.checked = false;
+    }
+    input.value = "";
 }
