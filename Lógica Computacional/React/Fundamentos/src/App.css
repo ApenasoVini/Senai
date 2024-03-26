@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 125vh;
+  width: 100%;
+  background-color: #d1d1d1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Header {
+  width: 100%;
+  height: 16vh;
+  background: linear-gradient(90deg, rgba(68, 68, 68, 1) 0%, rgba(101, 101, 101, 1) 50%, rgb(158, 158, 158) 100%);
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.Navbar {
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+}
+
+.List {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.List h1 {
+  font-weight: 800;
+  font-family: 'Times New Roman';
+}
+
+.List a {
+  color: inherit;
+  transition: ease .2s;
+}
+
+.List a:hover {
+  font-size: 17px;
+}
+
+.Gallery-Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.Gallery-Container img {
+  width: 20rem;
+  height: 15rem;
+  transition: ease .4s;
+}
+
+.Gallery-Container img:hover {
+  transform: scale(0.9);
+  box-shadow: 5px 5px 5px #868686;
+}
+
+.Text-Container {
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  margin: 0 2rem 0 2rem;
+  background-color: #868686;
+  box-shadow: 5px 5px 5px #585858;
+  gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: ease .2s;
+}
+
+.Text-Container:hover {
+  transform: scale(1.01);
+}
+
+.Text-Container h3 {
+  font-size: 32px;
+}
+
+.Text-Container p {
+  letter-spacing: 1.5px;
+  font-size: 18px;
+}
