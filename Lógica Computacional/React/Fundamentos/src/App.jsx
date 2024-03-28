@@ -1,5 +1,6 @@
 import React from 'react'
 import WebRoutes from './routes/index'
+import './App.css'
 
 function App() {
 
