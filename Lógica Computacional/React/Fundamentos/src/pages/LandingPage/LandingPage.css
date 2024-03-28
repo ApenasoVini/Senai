@@ -65,10 +65,6 @@
   transition: ease .2s;
 }
 
-.Text-Container:hover {
-  transform: scale(1.01);
-}
-
 .Text-Container h3 {
   font-size: 32px;
 }
