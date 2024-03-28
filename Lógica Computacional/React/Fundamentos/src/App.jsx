@@ -1,11 +1,11 @@
 import React from 'react'
-import AppRoutes from './routes/index'
+import WebRoutes from './routes/index'
 
 function App() {
 
   return (
     <div>
-      <AppRoutes />
+      <WebRoutes />
     </div>
   )
 }
