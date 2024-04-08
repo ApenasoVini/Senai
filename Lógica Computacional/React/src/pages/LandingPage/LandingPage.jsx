@@ -3,6 +3,7 @@ import './LandingPage.css';
 import Header from '../../components/Header';
 import Galeria from '../../components/Galeria';
 import Sobre from '../../components/Sobre';
+import Footer from "../../components/Footer.";
 
 const LandingPage = () => {
 
@@ -11,6 +12,7 @@ const LandingPage = () => {
             <Header />
             <Galeria />
             <Sobre />
+            <Footer />
         </div>
     )
 }
