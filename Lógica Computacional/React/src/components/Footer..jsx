@@ -20,7 +20,7 @@ const Footer = () => {
                         <p>Site criado com React e Vite</p>
                     </div>
                 </div>
-                <p>Copyright &copy 2023 | ViolinHub</p>
+                <p>&copy; 2023 ViolinHub. Todos os direitos reservados.</p>
             </footer>
         </>
     )
